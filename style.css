@@ -152,6 +152,10 @@ color: #333;
 
 }
 
+#output {
+  display: none;
+}
+
 #navigation a:hover {
   color: white !important;
   border-bottom: 2px dotted rgba(41, 168, 204, 0.44);
