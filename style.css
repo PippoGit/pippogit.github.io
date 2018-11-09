@@ -49,9 +49,8 @@ color: #333333;
   font-weight: bolder;
   /* padding: 5px; */
   border-radius: 100px;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  /* margin-left: 8px; */
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 #projects_list .project.last {
