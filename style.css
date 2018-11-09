@@ -1,3 +1,13 @@
+#github {
+  opacity: 0.7;
+font-size: 30px;
+color: #333333;
+}
+
+#github:hover {
+  opacity: 1;
+}
+
 .round {
   display: none;
 }
