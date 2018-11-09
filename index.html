@@ -2,6 +2,9 @@
   <title>PippoGIT</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,300" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,500" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
   <link href="style.css" rel="stylesheet" type="text/css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -11,8 +14,8 @@
   <script>
   $(document).ready(function() {
     //NON GITHUB projects
-    $("#projects_list").append("<a href='http://synjournal.altervista.org/home'> <li class=\"project\">  <span class=\"project_title\">" + "Home" + "</span>" +
-                  "<span class=\"project_description\">: A news aggregator with some nice search tools." +
+    $("#projects_list").append("<a href='http://synjournal.altervista.org/home'> <li class=\"project\"> <span class=\"label\">Home</span> " +
+                  "<span class=\"project_description\">A news aggregator with some nice search tools." +
                   "</span> </li></a>");
 
     //GITHUB PROJECTS
@@ -24,8 +27,8 @@
       {
         if(data[i].name == "pippogit.github.io") continue;
         if(i == data.length-1) last = true;
-        list.append("<a href='"+ data[i].html_url +"'><li class=\"project " + ((last)?"last":"") + "\">  <span class=\"project_title\">" + data[i].name + "</span>" +
-                      "<span class=\"project_description\">: " + data[i].description +
+        list.append("<a href='"+ data[i].html_url +"'> <li class=\"project " + ((last)?"last":"") + "\"> <span class=\"label\">"+data[i].name+"</span> " +
+                      "<span class=\"project_description\">" + data[i].description +
                       "</span> </li></a>");
 
 
@@ -39,9 +42,10 @@
 <body>
   <header>
     <div id="header_wrapper">
-      <img class="icon icons8-Source-Code-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABUNJREFUaAXtl0toXGUUgOeRx7TGLELUNj6gWZqSNGkeBkGyENFFW1sTI1WLLhRxI7iQ+sCiVIuKG7cilSpijVAzbrpwEQwYY54MxmVElKSG4mKoZCaPGb9zmTs995/XvTfX6eb+cO9/zvnP+z/33P+PRMIRZiDMQJiBMAO3IAPxetscGRlpaG9vf7ujo+P62traRlD26x5IW1vbIzj/Kc/LBDPKE1lfX5/fa0CxvSrwIX9ayRzO5/P3K9w3WNdAhoeH90Wj0ZPaWwL5SuN+4boGks1mj+Noi3L296WlpRmF+wbrGghe6rKKBLUbEr2rQPr6+o4y+nynC0HKqo2yelTrqBWI2BTbWqYSXDOQnp6eu3HgexRMo/RUJUW16JTVKDxNim+ZsvpN4Q6wYGsa20nxwbFYBqkaCBnZ39DQkETuIM9+lH6LgTfK6HFDcl1WYkNsiU2eDnyYFF+qGakWSBTBL3l0SaE/ens1heXWBgYG7kXuIbWWj8fjXyvcARZsiH17HKUML4Fomr1mzRUDIQPvweFoleBXFhYWPO/I7u7uU8gWncCpH+fm5v60PCjzKti4opcI7gl8elfTNFw2kP7+/jMwva4ZgZe3t7efZc4b9JooTjjKCoFa/458wdayofwtgjF1WSwlgRDEg2RMjhB6XKNOj6VSqX810Q3c29srf+4jinerublZ6r/qEFtiE6ZrBuNnfEMPGDRn+x0cHDxEELKlurtkyOiJ2dnZv0xhN7i5G+i/OjMz848bWbEptuHNKP4EtO/YmfsU7WYgQ0NDrdSytNk7NAOGn5ufn/9F07zAZiDI1iorh3qxLT44iJHIXeDJrq6u4inBKq2xsbE4NSldpEsL4MQ7i4uLlzXNC0xZDcN/SMncoKyknXsa4oP4Ygj1JBIJ6apWDNZrdXX1Yxgf04zgl8mGKaxZasLocHyYUraU1WZNwTIM4ov4ZCyd4Hu5ILQYwAvMr2gGDM41NjY+D81zh7L1yAUKw0/aeGH2VFaGbF58Et80HRuvSZct6VqaaS9wOp1+GPk7lY6N1tbWHxQeKBij/qTVfqK1EuUA38xFaFFN9wibZfXN1NTUjkcdmj0qPolvmsgOfUjZXbJ2pLOz81UYrhoM42zZOU1zC/8fFyjxBafHtQ/gSTbC+nFbgUxMTOxy9hEmx2kUxnMokOOFpxH0BYrveFx8MZxIYedpaDmhF78Rfj7pWCwmf9LrsmAPFFwkmEEbdzmbZeX7IxfbVMvnht2NXC53fGVl5YZNLwYiBA5yqzh+CnDLZmBOQJuUE6yiVQT9XKAqKeMnfY/YFh8UT5aEn+Qu84ei3dwRm0jNTSP8ko0X5gNkINnd3X2bQS9BvV6gShQUCGJrZ2dHThoHNA+78yIJ/0nTBHbsiL1IMNIdPrLxwnyEPi5/0lqdLIiyimLrC2zpw6a48YF0KAHMUTYQYULgLMFIRvR4nMOa9SfVRBv2eoGy5cwZG+9DM+9Ck9XuQhUDQVFuc3NTspsyDVXCvV6gKumBnubRp4pUJpN5BprVocrJVQskUugK0sn+5smyQ2fIytlyioTGuqOsIPnqVti4gC7ZEelKGzzHdIcCLxm16t0SsC8yfDs/l2goEOQCRTdZUetbTU1NB93ePZRcEcRuNwHtI7DZIrEC4CqQCrIOMkbPY/RNm0jnk7+uXIrqMqqWlhcPgiorLzY1byCBBHWB0o55hQMJxNwNysr3BcprADZ/UIHIYfNXWymzr26l5D2DgX3sYpkD3mGm0ZaWlvN7vHt4DiQUCDMQZiDMQJiBW5KB/wDcOdoS9FvFpAAAAABJRU5ErkJggg==" width="50" height="50" id="logo">
+      <img src="me.png" width="50" height="50" id="logo">
       <div id="logo_border"></div>
-        <span id="title" class="blue">PippoGIT</span>
+        <span id="title" class="blue">
+          <i class="fas fa-code"></i> PippoGIT</span>
         <p class="lightgray" id="subtitle">GitHub Projects and Stuff</p>
       </div>
   </header>
@@ -94,14 +98,10 @@
       ">me</span>.<span style="color: rgb(56, 245, 255);">printGreetings</span>(<span style="color: rgb(103, 233, 140);
       display: none;">"Nice to meet you!"</span>);</p>
 
+      <p>}</p>
 
 
-
-<div id="output">
-      <p style="border-bottom: 1px rgba(255, 255, 255, 0.25) dotted;
-      padding-bottom: 16px;">}</p><p style="margin-bottom: 0;
-      font-weight: 600;
-      ">&gt; Output:</p>
+<div id="output" style="border-top: 1px rgba(255, 255, 255, 0.25) dotted; padding-top: 16px;">
       <p style="margin-top: 4px;
       /* color: whitesmoke; */
       margin-bottom: 0;
@@ -118,7 +118,7 @@
 <div id="contacts_section">
 
 <div class="card">
-<p class="card_title">&gt; me.printEducation()</p>
+<p class="card_title"><i class="fas fa-history"></i> me.printTimeline()</p>
 <div class="card_content">
 
 <ul style="list-style: none;
@@ -126,14 +126,14 @@ padding: 0;
 margin: 0;
 /* position: absolute; */">
   <li style="margin-bottom: 4px;
-border-left: 2px solid #5986ff;
-padding: 8px;
+border-left: 2px solid #388eba;
+padding: 12px;
 position: relative;">
 
 <div class="round" style="position: absolute;
 width: 10px;
 height: 10px;
-background: #5986ff;
+background: #388eba;
 /* border: 1px solid #eeebf0; */
 border-radius: 100%;
 top: 0;
@@ -143,43 +143,53 @@ left: -6;"></div>
 font-weight: 500;
 
 color:#333;
-"> <img class="icon icons8-School-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi1JREFUSA3tlb9rE2EYx3N3+c0JQWyxiSgJiODpGUh0yX/gIC6ZqpODiIOTOCiKIILQRRycOnZpFt1cHbJoCOFsQ6GQoAiVKibiDfl1iZ8nJKWcvV5KdesLD/c83+f7fJ+7h3vfNxD4z0ubVb9YLGrxePxGMpm8VCgU1uv1+miWWt8GE+GbrVZrFcEkdgH/cSqV+kWjNb9GitdbiHCz2VwcjUaP4GwqivK0Uql8EH4+n78C/gT3LPizdDq9UiqVHMm5118N9hN2F8/SaKfBQYQP0kg5jPAsjRQ+8z3ztKczzmaziWAweIriBbB2t9v9bFnWtltMYtM05yORyBnqE4Rbg8Hga61Wa09HR72uiGA4HNYcx7kHaRHLYO71DeANQq8lQeEdHtexkxK7VoN4RdO0l71ezxmPqNFobAHOuYh7hS8m4IO9ki7seyaTWVD5j2UvzCLuqvcN50Rb9aUdknDUwHeARyPyHVFwF6OPv4F9EmO31nmeYPeeFyM2iKeXzBewdeFMeD+IDcwkNuGdw8Z3jWIYRjgWi73iqHhO8jQJIVzEN7Dt4XBoEVuhUOijbdtt/ICu64l+v38Z11RV1UR4Hn9DmnJErHEmbYI/BLs7Pq45nK6SlHNGGngth4bLkoR7i8d+t6F84e1qtfpOyeVyIcg/MR37l8tG7Pj4C7hbj3U6nYiXOuNQGdE18veFw9stMYa3YEOvmmg02i2Xy7+98l64vNDOLehF2o3/AXnGCFb1SDzBAAAAAElFTkSuQmCC" width="24" height="24" style="opacity: 0.8;
-float: left;
-margin-right: 8px;
-/* margin-top: 2px; */
-padding-top: 8px;
-padding-bottom: 8px;    font-weight: 500;
-
-/* height: 32px; */">ITI G. Galilei Livorno</p>
+"> <i style="
+    position: absolute;
+    left: -8px;
+    background: white;
+    /* padding: 5px; */
+    /* border-radius: 100%; */
+    /* border: 1px solid #3d8fb8; */
+    color: #3d8fb8;
+    top: 0px;
+"
+class="fas fa-book"></i>
+ITI G. Galilei Livorno</p>
  <p style="margin: 0;
 " class="lightgray">Informatica Abacus (2013)</p>
 </li><li style="margin-bottom: 4px;
-border-left: 2px solid #5986ff;
-padding: 8px;
+border-left: 2px solid #388eba;
+padding: 12px;
 position: relative;">
 <div class="round" style="position: absolute;
 width: 10px;
 height: 10px;
-background: #5986ff;
+background: #388eba;
 /* border: 1px solid #eeebf0; */
 border-radius: 100%;
 top: 0;
 left: -6;"></div>
  <p style="margin: 0;    font-weight: 500;
 
-/* color: 5986ff; */"><img class="icon icons8-University-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdtJREFUSA3tVc9LAkEUbnYVzcP2AzoL3Tv4A8SDRtAtiO5JBEWX6g+oP6D+AOsSBRFFtwihc1iHhdDdQ0GdAoMOEpi7h0plte9Nu4ss4poaXRx4zpv3vve9N2+cWTbUwYjH48OVSiXFGNskeKPRSPt8vlNZlj/dwlk7QCgUCoqiuA7CFeDGHdgSEh4ZhrGvqmrB4bOXLRNEIpEZIKjaeYhoo1srBswZSDqfz187IXYCkAZQ6aLZhiknsMP1PbUPHGdI9kExrKkNq1iPdUjkBntHkkNqH0PlZaBH3CK69GseBCawrdEuCdqGYRdlfgbRaHQDSZbbon/pBPlxLpfbsw85HA4nYLwhHiRbg35rcl5hnoScQHZN2xbmJcgzZI5siKH4A1NPKorC46lFfMBZsHTML/gXPNEaZ1SlGf4SKuI27LgEQjJXLRwKDJKBRjOX8GP6u99BAtfeDlr0/y2yL5qmaUVJkpJUUq1We7BKw4VKQQ8IgvBq2XCR0vV6/QJr/iSTHTF3Xq+Xx+u6XrSxpODJngDBDqmWo8dZRQHb+NK98R3gszgLQj/ksUdiK9xvcp6zWCwm4cOwgIyUoG8DHflCkksPepdBT6chfSMnInoMwZ0ViLyvzE1kxP0N482m73BybBsAAAAASUVORK5CYII=" width="24" height="24" style="opacity: 0.8;
-float: left;
-margin-right: 8px;
-/* margin-top: 2px; */
-padding-top: 8px;
-padding-bottom: 8px;     font-weight: 500;
-">University of Pisa</p>
+/* color: 5986ff; */">
+
+
+<i style="    position: absolute;
+    left: -10px;
+    background: white;
+    /* padding: 5px; */
+    /* border-radius: 100%; */
+    /* border: 1px solid #3d8fb8; */
+    color: #3d8fb8;
+    top: 0px;"
+class="fas fa-graduation-cap"></i>
+University of Pisa</p>
  <p style="margin: 0;
 " class="lightgray">Ingegneria Informatica (2018)</p>
 </li>
 <li style="margin-bottom: 4px;
-border-left: 2px dashed #5986ff;
-padding: 8px;
+border-left: 2px dotted #6666667d;
+padding: 12px;
 position: relative;">
 <div class="round" style="position: absolute;
 width: 10px;
@@ -192,14 +202,17 @@ left: -6;
 "></div>
  <p style="margin: 0;    font-weight: 500;
 
-/* color: 5986ff; */"><img class="icon icons8-University-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdtJREFUSA3tVc9LAkEUbnYVzcP2AzoL3Tv4A8SDRtAtiO5JBEWX6g+oP6D+AOsSBRFFtwihc1iHhdDdQ0GdAoMOEpi7h0plte9Nu4ss4poaXRx4zpv3vve9N2+cWTbUwYjH48OVSiXFGNskeKPRSPt8vlNZlj/dwlk7QCgUCoqiuA7CFeDGHdgSEh4ZhrGvqmrB4bOXLRNEIpEZIKjaeYhoo1srBswZSDqfz187IXYCkAZQ6aLZhiknsMP1PbUPHGdI9kExrKkNq1iPdUjkBntHkkNqH0PlZaBH3CK69GseBCawrdEuCdqGYRdlfgbRaHQDSZbbon/pBPlxLpfbsw85HA4nYLwhHiRbg35rcl5hnoScQHZN2xbmJcgzZI5siKH4A1NPKorC46lFfMBZsHTML/gXPNEaZ1SlGf4SKuI27LgEQjJXLRwKDJKBRjOX8GP6u99BAtfeDlr0/y2yL5qmaUVJkpJUUq1We7BKw4VKQQ8IgvBq2XCR0vV6/QJr/iSTHTF3Xq+Xx+u6XrSxpODJngDBDqmWo8dZRQHb+NK98R3gszgLQj/ksUdiK9xvcp6zWCwm4cOwgIyUoG8DHflCkksPepdBT6chfSMnInoMwZ0ViLyvzE1kxP0N482m73BybBsAAAAASUVORK5CYII=" width="24" height="24" style="opacity: 0.8;
-float: left;
-margin-right: 8px;
-/* margin-top: 2px; */
-padding-top: 4px;
-padding-top: 8px;
-padding-bottom: 8px;    font-weight: 500;
-">University of Pisa</p>
+/* color: 5986ff; */">
+<i style="    position: absolute;
+    left: -10px;
+    background: white;
+    /* padding: 5px; */
+    /* border-radius: 100%; */
+    /* border: 1px solid #3d8fb8; */
+    color: #6666667d;
+    top: 0px;"
+    class="fas fa-graduation-cap"></i>
+University of Pisa</p>
  <p style="margin: 0;
 " class="lightgray">Computer Engineering: Enterprise Systems (...)</p>
 </li>
@@ -211,14 +224,16 @@ padding-bottom: 8px;    font-weight: 500;
 </div>
 
 <div class="card">
-<p class="card_title">&gt;  me.printProjects()</p>
+<p class="card_title"><i class="fas fa-code"></i>  me.printProjects()</p>
+
+<p>List of projects hosted on github</p>
 <ul id="projects_list">
 
 </ul>
 </div>
 
 <div class="card">
-<p class="card_title">&gt; you.contact(me)</p>
+<p class="card_title"><i class="far fa-envelope"></i> you.contact(me)</p>
 <p style="/* color: rgb(68, 188, 161); */">Contact me at:<span style="color: #428fc0;
 text-decoration: underline;
 margin-left: 5px;
