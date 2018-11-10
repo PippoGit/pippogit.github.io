@@ -4,6 +4,16 @@ font-size: 30px;
 color: #333333;
 }
 
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 #github:hover {
   opacity: 1;
 }
