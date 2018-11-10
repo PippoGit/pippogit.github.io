@@ -31,10 +31,14 @@ color: #333333;
   margin: 0 auto;
   margin-bottom: 32px;
   background: rgba(53, 53, 53, 0.13);
-  box-shadow: 2px 2px 2px rgba(49, 49, 49, 0.12);
+  box-shadow: 0px 0px 20px 2px rgba(146, 144, 144, 0.16)  /*2px 2px 2px rgba(49, 49, 49, 0.12)*/;
   background: white;
   border-radius: 10px;
   /* float: left; */
+}
+
+.card:hover {
+  box-shadow: 0px 0px 50px 2px rgba(146, 144, 144, 0.16)  /*2px 2px 2px rgba(49, 49, 49, 0.12)*/;
 }
 
 #projects_list {
@@ -48,19 +52,21 @@ color: #333333;
   /* left: -25px; */
   /* top: 7px; */
   /* height: 100%; */
-  background: #3d8fb8;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 4px;
+  /* background: #3d8fb8; */
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  /* margin-right: 4px; */
   /* padding-top: 5px; */
   /* padding-bottom: 5px; */
-  color: white;
+  color: #3d8fb8;
   /* vertical-align: middle; */
   font-weight: bolder;
   /* padding: 5px; */
   border-radius: 100px;
   padding-top: 3px;
   padding-bottom: 3px;
+  -webkit-font-smoothing: antialiased;
+  display: block;
 }
 
 #projects_list .project.last {
@@ -74,7 +80,7 @@ color: #333333;
 
 #projects_list .project {
   padding: 12px 10px;
-  border-bottom: 1px dotted #dfdfdf;
+  /*border-bottom: 1px dotted #dfdfdf;*/
   cursor: pointer;
   /* background: #f2f2f2; */
   border-radius: 5px;
