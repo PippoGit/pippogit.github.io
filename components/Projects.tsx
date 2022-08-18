@@ -50,7 +50,7 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
   "217676570": {
     title: "Distributed Hash Breaker",
     details:
-      "A distributed application that can be used to find collisions in hash functions and analyze the results from a web dashboard.",
+      "A distributed application that can be used to find collisions in hash functions and analyze the results with a web dashboard.",
     tags: ["cybersecurity"],
     languages: ["Java", "Javascript"],
     order: 6,
