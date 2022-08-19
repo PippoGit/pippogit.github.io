@@ -7,7 +7,7 @@ interface CardProps {
 
 export const Card = (props: CardProps) => {
   return (
-    <div className="shadow-sm text-sky-50 p-2 bg-sky-800 rounded-lg border border-sky-600">
+    <div className="shadow-sm dark:text-sky-50 text-gray-800 p-2 dark:bg-sky-800 bg-white rounded-lg dark:border dark:border-sky-600 border-gray-100">
       {props.children}
     </div>
   );
@@ -20,13 +20,15 @@ interface CardHeaderProps {
 
 export const CardHeader = ({ title, icon }: CardHeaderProps) => {
   return (
-    <div className="font-bold tracking-wider text-sm  text-sky-500 font-mono flex items-center gap-2 bg-sky-700 p-1 rounded-lg">
-      <div className="gap-0">
-        <span className="text-pink-300 px-2">{"~/filippo:"}</span>
+    <div className="font-bold tracking-wider text-sm  dark:text-sky-50 text-gray-500 font-mono flex items-center gap-2 dark:bg-sky-700 bg-gray-100 p-1 rounded-lg">
+      <div className="gap-0 font-bold">
+        <span className="dark:text-pink-300 text-pink-700 px-2">
+          {"~/filippo:"}
+        </span>
         <span>{"$"}</span>
       </div>
-      <span>{title}</span>
-      <div className="text-sky-400 ml-auto mr-1">{icon}</div>
+      <span className="font-semibold">{title}</span>
+      <div className="ml-auto mr-1">{icon}</div>
     </div>
   );
 };

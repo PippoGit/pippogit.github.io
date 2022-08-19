@@ -15,11 +15,13 @@ const Item = ({ item }: { item: Item }) => {
     // <a href={item.url}>
     <button
       formAction={item.url}
-      className="flex p-2 m-0 w-full text-left focus:ring-2 active:ring-2 target:ring-2 ring-sky-300 rounded-lg hover:bg-sky-700 cursor-pointer justify-between items-center"
+      className="flex p-2 m-0 w-full text-left focus:ring-2 active:ring-2 target:ring-2 ring-sky-200 rounded-lg hover:dark:bg-sky-700 hover:bg-gray-100 cursor-pointer justify-between items-center"
     >
       <div>
         <p className="font-semibold">{item.title}</p>
-        <p className="text-sm text-sky-100">{item.subtitle}</p>
+        <p className="text-sm dark:text-sky-100 text-gray-500">
+          {item.subtitle}
+        </p>
       </div>
       <FaChevronRight />
     </button>

@@ -149,7 +149,7 @@ export const Projects = () => {
         <CardHeader title="projects --github" icon={<FaCode />} />
         <CardContent>
           <div className="flex flex-col gap-4">
-            <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-2 bg-sky-800 rounded-xl pt-2">
+            <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-2 rounded-xl pt-2">
               {/* <div className="pl-2 mt-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2 text-yellow-100">
                 <FaStar />
                 <span>Pinned Projects</span>
@@ -160,7 +160,7 @@ export const Projects = () => {
                   <PinnedProjectCard key={project.id} project={project} />
                 ))}
             </div>
-            <div className="border-t border-sky-700 pt-4">
+            <div className="border-t dark:border-sky-700 border-gray-200 pt-4">
               {/* <div className="pl-2 mb-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2">
                 <span>Other Projects</span>
               </div> */}
