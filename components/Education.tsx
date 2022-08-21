@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader } from "./Card";
 import { Timeline } from "./Timeline";
-import { FiBook } from "react-icons/fi";
 import { FaBook } from "react-icons/fa";
 
 const timelineEvents = [
@@ -26,7 +25,7 @@ const timelineEvents = [
     details:
       "Design and development of a visual anomaly detection system based on attention",
   },
-];
+].reverse();
 
 export const Education = () => {
   return (

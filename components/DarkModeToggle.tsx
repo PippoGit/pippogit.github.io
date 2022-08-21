@@ -1,4 +1,4 @@
-import { FaMapPin, FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 import useDarkMode from "use-dark-mode";
 
 export const DarkModeToggle = () => {
