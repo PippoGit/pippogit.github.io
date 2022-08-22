@@ -18,7 +18,7 @@ export const Header = () => {
           <DarkModeToggle />
         </ClientOnly>
       </div>
-      <div className=" flex flex-col p-4 mt-4 bg-zinc-800 rounded-lg border-1 dark:border-sky-600 border-skyß-600 shadow-lg dark:shadow-sky-800/50 shadow-sky-800/20">
+      <div className=" flex flex-col p-4 mt-4 bg-zinc-800 rounded-lg border-1 dark:border-sky-600 border-sky-600 shadow-lg dark:shadow-sky-800/50 shadow-sky-800/20">
         <span className="dark:text-sky-400 text-sky-300 min-h-[4.25em]  font-mono text-sm ">
           <Typewriter
             options={{
