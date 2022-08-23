@@ -1,10 +1,14 @@
 import Head from "next/head";
 import { Header } from "../components/Header";
 import { Education } from "../components/Education";
-import { Projects } from "../components/Projects";
+import { GithubProject, Projects } from "../components/Projects";
 import { Work } from "../components/Work";
 
-export default function Home() {
+export default function Home({
+  githubProjects,
+}: {
+  githubProjects: GithubProject[];
+}) {
   return (
     <div>
       <Head>
@@ -19,10 +23,21 @@ export default function Home() {
           <Header />
           <Education />
           <Work />
-          <Projects />
+          <Projects githubProjects={githubProjects} />
         </div>
       </main>
       <footer className="dark:bg-sky-800 bg-sky-800 text-center dark:text-sky-50 font-bold py-1"></footer>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://api.github.com/users/PippoGIT/repos");
+  const githubProjects = (await res.json()) as GithubProject[];
+
+  return {
+    props: {
+      githubProjects,
+    },
+  };
+};
