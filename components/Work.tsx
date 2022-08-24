@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader } from "./Card";
 import { FaTools } from "react-icons/fa";
 import { WorkCard } from "./WorkCard";
+import { stringify } from "querystring";
 
 interface Company {
   name: string;
@@ -26,14 +27,15 @@ const workProjects = [
     year: 2022,
     details: "Food delivery platform developed using NextJS and Laravel.",
     technologies: [
-      "NextJS/React frontend (SSR and SEO)",
+      "**TypeScript** and **NextJS/React** frontend",
       "Jotai Atoms for global state management",
       "ChakraUI for user interface",
-      "PHP/Laravel for the backend",
-      "GraphQL APIs (Lighthouse as provider on the backend and URQL as client on the frontend)",
+      "`react-hook-form` for form validation",
+      "**PHP/Laravel** for the backend",
+      "**GraphQL** APIs (Lighthouse as provider on the backend and URQL as client on the frontend)",
       "PostgreSQL database with PostGIS extension for geographical queries",
     ],
-    tags: ["NextJS", "Laravel"],
+    tags: ["NextJS", "Laravel", "TypeScript"],
   },
   {
     title: "ITS Manager",
@@ -45,9 +47,9 @@ const workProjects = [
     details:
       "Business management web application developed using react with multiple users and an administration panel.",
     technologies: [
-      "React frontend",
+      "**React** frontend",
       "MUI for user interface",
-      "Backend powered by Google Firebase (authentication, data storage and file storage)",
+      "Backend powered by **Google Firebase** (authentication, data storage and file storage)",
     ],
     tags: ["React", "Firebase"],
   },

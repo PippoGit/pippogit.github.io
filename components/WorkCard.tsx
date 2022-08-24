@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { WorkProject } from "./Work";
+import ReactMarkdown from "react-markdown";
 
 interface WorkCardProps {
   project: WorkProject;
@@ -34,7 +35,9 @@ export const WorkCard = ({ project }: WorkCardProps) => {
       {project.technologies && (
         <ul className="text-sm text-pink-800 dark:text-sky-50 pb-2 list-disc px-6">
           {project.technologies.map((t, idx) => (
-            <li key={idx}>{t}</li>
+            <li key={idx}>
+              <ReactMarkdown>{t}</ReactMarkdown>
+            </li>
           ))}
         </ul>
       )}
