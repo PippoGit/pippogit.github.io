@@ -26,10 +26,11 @@ const workProjects = [
     year: 2022,
     details: "Food delivery platform developed using NextJS and Laravel.",
     technologies: [
-      "React and NextJS for the frontend",
-      "ChakraUI",
+      "NextJS/React frontend (SSR and SEO)",
+      "Jotai Atoms for global state management",
+      "ChakraUI for user interface",
       "PHP/Laravel for the backend",
-      "GraphQL for the APIs (Lighthouse as provider on the backend and URQL as client on the frontend)",
+      "GraphQL APIs (Lighthouse as provider on the backend and URQL as client on the frontend)",
       "PostgreSQL database with PostGIS extension for geographical queries",
     ],
     tags: ["NextJS", "Laravel"],
@@ -44,8 +45,8 @@ const workProjects = [
     details:
       "Business management web application developed using react with multiple users and an administration panel.",
     technologies: [
-      "Frontend built with react",
-      "MUI",
+      "React frontend",
+      "MUI for user interface",
       "Backend powered by Google Firebase (authentication, data storage and file storage)",
     ],
     tags: ["React", "Firebase"],

@@ -1,5 +1,4 @@
-import { FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
-import { FiCalendar, FiClock } from "react-icons/fi";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { WorkProject } from "./Work";
 
 interface WorkCardProps {
