@@ -8,6 +8,9 @@ const nextConfig = {
   // assetPrefix: isProd ? "./" : undefined,
   basePath: isProd ? process.env.NEXT_PUBLIC_BASE_PATH : undefined,
   assetPrefix: isProd ? process.env.NEXT_PUBLIC_BASE_PATH : undefined,
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
