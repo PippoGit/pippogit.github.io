@@ -1,7 +1,7 @@
 import React from "react";
 import { Section } from "./Section";
 import Image from "next/image";
-import { FaEye } from "react-icons/fa";
+import { FiEye } from "react-icons/fi";
 import { Header } from "./Header";
 
 export const Hero = () => {
@@ -10,7 +10,7 @@ export const Hero = () => {
       <Section>
         <Header />
 
-        <div className="flex h-lg w-full md:justify-between justify-around items-center h-[450px] py-20 flex-col-reverse md:flex-row md:px-0 px-3">
+        <div className="flex h-lg w-full md:justify-between justify-around items-center h-[450px] py-20 flex-col-reverse md:flex-row ">
           <div>
             <p className="text-pizza-red font-bold xl:text-3xl lg:text-2xl  text-xl ">
               hello, my name is
@@ -22,11 +22,11 @@ export const Hero = () => {
               I make stuff with modern web technologies and machine learning.
             </p>
             <p className="text-pizza-lightest-green font-mono font-semibold mt-3 md:text-lg text-md">
-              &gt; computer engineer from 🇮🇹
+              &gt; software engineer from 🇮🇹
             </p>
-            <button className="bg-pizza-bright-green px-5 py-2 text-lg rounded-xl mt-6 flex items-center gap-2 hover:bg-pizza-green active:ring-3 focus:ring-2 ring-pizza-light-green">
-              <FaEye />
-              <span className="font-bold">see projects</span>
+            <button className="bg-pizza-bright-green px-5 py-2 text-lg rounded-xl mt-6 flex items-center gap-2 hover:bg-pizza-green active:ring-3 focus:ring-2 ring-pizza-light-green text-white">
+              <FiEye />
+              <span className="font-bold ">see projects</span>
             </button>
           </div>
           <div className="md:w-[350px] md:h-[350px] w-[200px] h-[200px] relative flex-shrink-0">

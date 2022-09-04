@@ -1,7 +1,6 @@
 import Head from "next/head";
-import { Header } from "../components/Pizza/Header";
+import { About } from "../components/Pizza/About";
 import { Hero } from "../components/Pizza/Hero";
-import { Skills } from "../components/Pizza/Skills";
 import { GithubProject } from "../components/Projects";
 
 export default function Home({
@@ -10,16 +9,14 @@ export default function Home({
   githubProjects: GithubProject[];
 }) {
   return (
-    <div className="bg-white min-h-screen antialiased">
+    <div className="bg-white min-h-screen antialiased text-pizza-dark-green ">
       <Head>
-        <title>a software engineer from italy</title>
+        <title>Pippogit - software engineer from italy</title>
         <meta name="description" content="github projects and stuff" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Hero />
-      <div id="about">
-        <Skills />
-      </div>
+      <About />
     </div>
   );
 }
