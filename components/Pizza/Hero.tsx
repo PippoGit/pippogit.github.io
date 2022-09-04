@@ -29,7 +29,7 @@ export const Hero = () => {
               <span className="font-bold">see projects</span>
             </button>
           </div>
-          <div className="md:w-[400px] md:h-[400px] w-[200px] h-[200px] relative flex-shrink-0">
+          <div className="md:w-[350px] md:h-[350px] w-[200px] h-[200px] relative flex-shrink-0">
             <Image alt="an illustration of me" src="/me-xl.png" layout="fill" />
           </div>
         </div>

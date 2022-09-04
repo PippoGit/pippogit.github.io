@@ -9,7 +9,7 @@ export const Section = ({
 }) => {
   return (
     <div
-      className={`container max-w-5xl md:mx-w-6xl mx-auto py-10 md:px-0 sm:px-3 px-2 ${className}`}
+      className={`container max-w-5xl md:mx-w-6xl mx-auto py-10 md:px-4 sm:px-3 px-2 ${className}`}
     >
       {children}
     </div>

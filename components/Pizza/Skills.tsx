@@ -20,58 +20,59 @@ export const Skills = () => {
       </svg>
       <Section>
         <div className="flex flex-col items-center mb-8">
-          <p className="text-pizza-red font-bold xl:text-2xl lg:text-2xl  md:text-1xl sm:text-lg">
+          <p className="text-pizza-red font-bold xl:text-2xl lg:text-2xl  md:text-xl text-xl">
             about me
           </p>
-          <p className="text-pizza-green font-extrabold xl:text-5xl lg:text-6xl md:text-5xl sm:text-2xl tracking-tighter	">
+          <p className="text-pizza-green font-extrabold xl:text-5xl lg:text-6xl md:text-5xl text-4xl tracking-tighter	">
             Full-Stack Knowledge!
           </p>
         </div>
-        <div className="flex justify-between items-center">
-          <Image
-            alt="an illustration of me"
-            src="/fullstack.svg"
-            width="450px"
-            height="450px"
-          />
+        <div className="flex md:justify-between items-center md:flex-row flex-col lg:gap-0 md:gap-5 gap-5">
+          <div className="relative h-[220px] w-[350px] lg:h-[400px] lg:w-[400px]">
+            <Image
+              alt="an illustration of me"
+              src="/fullstack.svg"
+              layout="fill"
+            />
+          </div>
           <div className="flex flex-col gap-3 ">
             <div>
-              <p className="font-mono font-bold text-pizza-red text-lg">
+              <p className="font-mono font-bold text-pizza-red md:text-lg text-md">
                 {"// low-level"}
               </p>
-              <p className="font-semibold text-pizza-dark-green text-lg">
+              <p className="font-semibold text-pizza-dark-green md:text-lg text-md">
                 C, C++.
               </p>
             </div>
             <div>
-              <p className="font-mono font-bold text-pizza-red text-lg">
+              <p className="font-mono font-bold text-pizza-red md:text-lg text-md">
                 {"// backend"}
               </p>
-              <p className="font-semibold text-pizza-dark-green text-lg">
+              <p className="font-semibold text-pizza-dark-green md:text-lg text-md">
                 PHP, Laravel, NodeJS, Java, Python, GraphQL.
               </p>
             </div>
             <div>
-              <p className="font-mono font-bold text-pizza-red text-lg">
+              <p className="font-mono font-bold text-pizza-red md:text-lg text-md">
                 {"// frontend"}
               </p>
-              <p className="font-semibold text-pizza-dark-green text-lg">
+              <p className="font-semibold text-pizza-dark-green md:text-lg text-md">
                 Javascript, TypeScript, React, NextJS, ChakraUI, TailwindCSS.
               </p>
             </div>
             <div>
-              <p className="font-mono font-bold text-pizza-red text-lg">
+              <p className="font-mono font-bold text-pizza-red md:text-lg text-md">
                 {"// AI and data enginering"}
               </p>
-              <p className="font-semibold text-pizza-dark-green text-lg">
+              <p className="font-semibold text-pizza-dark-green md:text-lg text-md">
                 Python libraries (Pandas, SciKit, PyTorch, Numpy), MATLAB.
               </p>
             </div>
             <div>
-              <p className="font-mono font-bold text-pizza-red text-lg">
+              <p className="font-mono font-bold text-pizza-red md:text-lg text-md">
                 {"// design"}
               </p>
-              <p className="font-semibold text-pizza-dark-green text-lg">
+              <p className="font-semibold text-pizza-dark-green md:text-lg text-md">
                 Photoshop, Illustrator, Figma.
               </p>
             </div>
