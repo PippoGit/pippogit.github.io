@@ -4,12 +4,12 @@ import { Section } from "./Section";
 
 export const Skills = () => {
   return (
-    <div className="bg-white antialiased w-full">
+    <div className="bg-white antialiased w-full text-pizza-dark-green">
       <svg
-        width="100%"
         height="140"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        viewBox="0 0 1300 140"
+        preserveAspectRatio="none"
       >
         <g clipPath="url(#clip0_29_1370)">
           <path
@@ -19,28 +19,68 @@ export const Skills = () => {
         </g>
       </svg>
       <Section>
-        <Image
-          alt="an illustration of me"
-          src="/fullstack.svg"
-          width="450px"
-          height="450px"
-        />
-        <div className="flex h-lg w-full justify-between items-center h-[450px] py-20">
-          <div>
-            <p className="text-pizza-red font-bold xl:text-3xl lg:text-2xl  md:text-1xl sm:text-lg">
-              hello, my name is
-            </p>
-            <p className="text-pizza-green font-extrabold xl:text-8xl lg:text-6xl md:text-5xl sm:text-2xl tracking-tight	">
-              Filippo Scotto
-            </p>
-            <p className="text-pizza-light-green text-2xl font-semibold max-w-lg mt-2">
-              I make stuff with modern web technologies and machine learning.
-            </p>
-            <p className="text-pizza-lightest-green font-mono font-semibold mt-3">
-              &gt; computer engineer from 🇮🇹
-            </p>
+        <div className="flex flex-col items-center mb-8">
+          <p className="text-pizza-red font-bold xl:text-2xl lg:text-2xl  md:text-1xl sm:text-lg">
+            about me
+          </p>
+          <p className="text-pizza-green font-extrabold xl:text-5xl lg:text-6xl md:text-5xl sm:text-2xl tracking-tighter	">
+            Full-Stack Knowledge!
+          </p>
+        </div>
+        <div className="flex justify-between items-center">
+          <Image
+            alt="an illustration of me"
+            src="/fullstack.svg"
+            width="450px"
+            height="450px"
+          />
+          <div className="flex flex-col gap-3 ">
+            <div>
+              <p className="font-mono font-bold text-pizza-red text-lg">
+                {"// low-level"}
+              </p>
+              <p className="font-semibold text-pizza-dark-green text-lg">
+                C, C++.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono font-bold text-pizza-red text-lg">
+                {"// backend"}
+              </p>
+              <p className="font-semibold text-pizza-dark-green text-lg">
+                PHP, Laravel, NodeJS, Java, Python, GraphQL.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono font-bold text-pizza-red text-lg">
+                {"// frontend"}
+              </p>
+              <p className="font-semibold text-pizza-dark-green text-lg">
+                Javascript, TypeScript, React, NextJS, ChakraUI, TailwindCSS.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono font-bold text-pizza-red text-lg">
+                {"// AI and data enginering"}
+              </p>
+              <p className="font-semibold text-pizza-dark-green text-lg">
+                Python libraries (Pandas, SciKit, PyTorch, Numpy), MATLAB.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono font-bold text-pizza-red text-lg">
+                {"// design"}
+              </p>
+              <p className="font-semibold text-pizza-dark-green text-lg">
+                Photoshop, Illustrator, Figma.
+              </p>
+            </div>
           </div>
         </div>
+        <a href="https://www.freepik.com/free-vector/pizza-delivery-handing-pizza-boxes_1310910.htm#query=pizza%20box%20stack&position=0&from_view=search">
+          Image by iconicbestiary
+        </a>{" "}
+        on Freepik
       </Section>
     </div>
   );
