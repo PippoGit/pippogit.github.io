@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { url } = require("inspector");
 const twColors = require("tailwindcss/colors");
 
 module.exports = {
@@ -21,6 +22,10 @@ module.exports = {
       },
       fontFamily: {
         mono: ["Fira Code", "mono"],
+      },
+
+      backgroundImage: {
+        "pizza-pattern": "url('/pizza-pattern.jpg')",
       },
     },
   },

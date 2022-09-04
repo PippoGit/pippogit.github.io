@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { About } from "../components/Pizza/About";
 import { Hero } from "../components/Pizza/Hero";
+import { Projects } from "../components/Pizza/Projects";
 import { GithubProject } from "../components/Projects";
 
 export default function Home({
@@ -11,12 +12,13 @@ export default function Home({
   return (
     <div className="bg-white min-h-screen antialiased text-pizza-dark-green ">
       <Head>
-        <title>Pippogit - software engineer from italy</title>
+        <title>PippoGit - software engineer from italy</title>
         <meta name="description" content="github projects and stuff" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Hero />
       <About />
+      <Projects githubProjects={githubProjects} />
     </div>
   );
 }

@@ -5,10 +5,7 @@ import { Skills } from "./Skills";
 
 export const About = () => {
   return (
-    <div
-      id="about"
-      className="bg-white antialiased w-full text-pizza-dark-green"
-    >
+    <div className="bg-white antialiased w-full text-pizza-dark-green">
       <svg
         height="140"
         width="100%"
@@ -22,9 +19,9 @@ export const About = () => {
           />
         </g>
       </svg>
-      <Section>
+      {/* <Section>
         <p className="font-extrabold text-5xl text-pizza-red">About me</p>
-      </Section>
+      </Section> */}
       <Education />
       <Skills />
     </div>
