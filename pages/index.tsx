@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { Header } from "../components/Header";
-import { Education } from "../components/Education";
-import { GithubProject, Projects } from "../components/Projects";
-import { Work } from "../components/Work";
+import { About } from "../components/Pizza/About";
+import { Hero } from "../components/Pizza/Hero";
+import { Projects } from "../components/Pizza/Projects";
+import { GithubProject } from "../components/Projects";
 
 export default function Home({
   githubProjects,
@@ -10,23 +10,15 @@ export default function Home({
   githubProjects: GithubProject[];
 }) {
   return (
-    <div>
+    <div className="bg-white min-h-screen antialiased text-pizza-dark-green ">
       <Head>
-        <title>web page of a software engineer from italy</title>
+        <title>PippoGit - software engineer from italy</title>
         <meta name="description" content="github projects and stuff" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-
-      <div className="dark:bg-sky-800 bg-sky-800 text-center dark:text-sky-50  font-bold py-1"></div>
-      <main className="dark:bg-sky-900 bg-gray-100 min-h-screen px-2 py-2">
-        <div className="max-w-3xl mx-auto flex flex-col gap-4 pb-4">
-          <Header />
-          <Education />
-          <Work />
-          <Projects githubProjects={githubProjects} />
-        </div>
-      </main>
-      <footer className="dark:bg-sky-800 bg-sky-800 text-center dark:text-sky-50 font-bold py-1"></footer>
+      <Hero />
+      <About />
+      <Projects githubProjects={githubProjects} />
     </div>
   );
 }
