@@ -15,7 +15,7 @@ export const Skills = () => {
         </p>
       </div>
       <div className="flex md:justify-between items-center md:flex-row flex-col lg:gap-0 md:gap-5 gap-5">
-        <div className="relative h-[220px] w-[350px] lg:h-[400px] lg:w-[400px]">
+        <div className="relative h-[220px] w-[300px] lg:h-[400px] lg:w-[400px]">
           <Image
             alt="an illustration of me"
             src="/fullstack.svg"
