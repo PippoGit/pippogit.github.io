@@ -1,5 +1,5 @@
 import React from "react";
-import { Work } from "../Work";
+import { Work } from "./Work";
 import { GithubProject, Projects as GHProjects } from "../Projects";
 import { Section } from "./Section";
 import { Skills } from "./Skills";
@@ -13,7 +13,7 @@ export const Projects = ({
     <div id="projects" className="w-full text-pizza-dark-green">
       <div className="h-[10rem] w-full bg-pizza-pattern" />
       <Section className="bg-white ">
-        <p className="font-extrabold text-4xl text-left text-pizza-red mb-4">
+        <p className="font-extrabold text-4xl text-center text-pizza-red my-10 mb-14">
           Work projects
         </p>
 

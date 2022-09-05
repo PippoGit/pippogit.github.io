@@ -6,7 +6,7 @@ import { Section } from "./Section";
 export const Skills = () => {
   return (
     <Section>
-      <div className="flex flex-col items-center mb-8">
+      <div className="flex flex-col items-center mb-14 mt-2">
         {/* <p className="text-pizza-red font-bold xl:text-2xl lg:text-2xl  md:text-xl text-xl">
             about me
           </p> */}

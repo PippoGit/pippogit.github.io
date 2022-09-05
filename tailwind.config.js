@@ -18,7 +18,10 @@ module.exports = {
         "pizza-lightest-green": "#7EB484",
         "pizza-bright-green": "#13901F",
         "pizza-red": "#A91919",
+        "pizza-lightest-red": "#F2A6A6",
         "pizza-transparent-green": "#E8FCEA",
+        "pizza-box-white": "#F7F2ED",
+        "pizza-box-grey": "#919085",
       },
       fontFamily: {
         mono: ["Fira Code", "mono"],
