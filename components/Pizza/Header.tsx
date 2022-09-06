@@ -10,8 +10,8 @@ export const Header = () => {
         <a href="#about" className="hover:text-pizza-bright-green">
           about
         </a>
-        <a href="#projects" className="hover:text-pizza-bright-green">
-          projects
+        <a href="#portfolio" className="hover:text-pizza-bright-green">
+          portfolio
         </a>
         <a href="#contacts" className="hover:text-pizza-bright-green">
           contact

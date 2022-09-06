@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer utilities {
+  .fancy-text-shadow {
+    text-shadow: 7px 5px #a91818;
+  }
+}
 
 html,
 body {

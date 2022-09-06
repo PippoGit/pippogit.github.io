@@ -1,8 +1,8 @@
 import React from "react";
 import { Work } from "./Work";
-import { GithubProject, Projects as GHProjects } from "../Projects";
+import type { GithubProject } from "./GithubProjects";
+import { GithubProject as GHProjects } from "./GithubProjects";
 import { Section } from "./Section";
-import { Skills } from "./Skills";
 
 export const Projects = ({
   githubProjects,
@@ -10,20 +10,31 @@ export const Projects = ({
   githubProjects: GithubProject[];
 }) => {
   return (
-    <div id="projects" className="w-full text-pizza-dark-green">
-      <div className="h-[10rem] w-full bg-pizza-pattern" />
-      <Section className="bg-white ">
-        <p className="font-extrabold text-4xl text-center text-pizza-red my-10 mb-14">
-          Work projects
+    <div id="portfolio" className="w-full text-pizza-dark-green bg-[#fcfaf8] ">
+      <div className="h-auto w-full bg-pizza-pattern  border-t-white border-y-4 border-b-[#fcfaf8] border-dashed py-10">
+        <Section className="flex items-center justify-center ">
+          <p className="font-extrabold lg:text-9xl md:text-8xl sm:text-8xl text-7xl text-center tracking-wider text-white w-full p-5 fancy-text-shadow opacity-95 ">
+            Portfolio
+          </p>
+        </Section>
+      </div>
+      <Section>
+        {/* <p className="font-mono font-bold text-2xl text-pizza-box-grey mb-5 opacity-40">
+          &gt; projects --work
+        </p> */}
+        {/* <p className="font-mono font-bold text-xl text-slate-400 mb-5  bg-slate-900 p-5 rounded-xl">
+          &gt; projects --work
+        </p> */}
+        <p className="font-mono font-bold text-lg text-gray-400 mb-5  bg-gray-100 p-4 rounded-xl">
+          <span className="font-semibold">&gt;</span> projects --work
         </p>
-
         <Work />
       </Section>
-      <Section className="bg-white ">
-        <p className="font-extrabold text-4xl text-left text-pizza-red mb-4">
-          Github projects
+      <Section className="pt-2.5">
+        <p className="font-mono font-bold text-lg text-gray-400 mb-5  bg-gray-100 p-4 rounded-xl">
+          <span className="font-semibold">&gt;</span> projects --github
+          --university
         </p>
-
         <GHProjects githubProjects={githubProjects} />
       </Section>
     </div>

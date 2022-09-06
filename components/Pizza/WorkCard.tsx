@@ -8,7 +8,7 @@ interface WorkCardProps {
 
 export const WorkCard = ({ project }: WorkCardProps) => {
   return (
-    <div className="flex flex-col shadow-sm  bg-pizza-box-white p-4  rounded-2xl relative">
+    <div className="flex flex-col bg-pizza-box-white p-4  rounded-2xl relative">
       <div className="flex pb-0 items-top justify-between ">
         <div className="flex flex-col items-top">
           <p className="font-extrabold text-pizza-red text-xl ">
@@ -41,7 +41,7 @@ export const WorkCard = ({ project }: WorkCardProps) => {
         {project.tags.map((l, idx) => (
           <div
             key={idx}
-            className="text-sm font-bold dark:text-pink-700 text-pizza-red bg-pizza-lightest-red rounded-full px-3 py-0.5 shadow-sm h-auto"
+            className="text-sm font-bold dark:text-pink-700 text-pizza-red bg-pizza-lightest-red rounded-full px-3 py-0.5 h-auto"
           >
             {l}
           </div>

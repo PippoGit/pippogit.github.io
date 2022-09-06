@@ -3,6 +3,7 @@ import { Section } from "./Section";
 import Image from "next/image";
 import { FiEye } from "react-icons/fi";
 import { Header } from "./Header";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -27,10 +28,12 @@ export const Hero = () => {
             <p className="text-pizza-lightest-green font-mono font-semibold mt-3 md:text-lg text-md">
               &gt; software engineer from 🇮🇹
             </p>
-            <button className="bg-pizza-bright-green px-5 py-2 text-lg rounded-xl mt-6 flex items-center gap-2 hover:bg-pizza-green active:ring-3 focus:ring-2 ring-pizza-light-green text-white">
-              <FiEye />
-              <span className="font-bold ">see projects</span>
-            </button>
+            <Link href="#portfolio">
+              <button className="bg-pizza-bright-green px-5 py-2 text-lg rounded-xl mt-6 flex items-center gap-2 hover:bg-pizza-green active:ring-3 focus:ring-2 ring-pizza-light-green text-white">
+                <FiEye />
+                <span className="font-bold">see portfolio</span>
+              </button>
+            </Link>
           </div>
           <div className="md:w-[350px] md:h-[350px] w-[200px] h-[200px] relative flex-shrink-0">
             <Image alt="an illustration of me" src="/me-xl.png" layout="fill" />
