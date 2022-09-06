@@ -14,7 +14,7 @@ export const Header = () => {
           portfolio
         </a>
         <a href="#contacts" className="hover:text-pizza-bright-green">
-          contact
+          contacts
         </a>
         <a
           href="https://www.github.com/PippoGit"

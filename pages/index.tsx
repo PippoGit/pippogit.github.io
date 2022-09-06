@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { About } from "../components/Pizza/About";
+import { Contacts } from "../components/Pizza/Contacts";
+import { Footer } from "../components/Pizza/Footer";
 import { Hero } from "../components/Pizza/Hero";
 import { Projects } from "../components/Pizza/Projects";
 import { GithubProject } from "../components/Projects";
@@ -19,6 +21,8 @@ export default function Home({
       <Hero />
       <About />
       <Projects githubProjects={githubProjects} />
+      <Contacts />
+      <Footer />
     </div>
   );
 }

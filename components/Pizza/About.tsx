@@ -1,6 +1,5 @@
 import React from "react";
 import { Education } from "./Education";
-import { Section } from "./Section";
 import { Skills } from "./Skills";
 
 export const About = () => {
