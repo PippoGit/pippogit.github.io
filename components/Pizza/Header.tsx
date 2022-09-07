@@ -9,7 +9,7 @@ export const Header = () => {
     <motion.div
       initial={{ x: "-300px", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      className="flex justify-between items-center md:my-10 my-5 mt-0 pb-10"
+      className="justify-between items-center md:my-10 my-5 mt-0 pb-10 hidden md:flex"
     >
       <div className="font-extrabold text-pizza-green text-4xl">pippogit</div>
       <div className="md:flex gap-14 text-pizza-light-green text-xl font-bold items-center hidden">

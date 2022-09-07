@@ -50,7 +50,7 @@ export const Hero = () => {
               visible: { opacity: 1, scale: 1 },
               hidden: { opacity: 0, scale: 0 },
             }}
-            className="md:w-[350px] md:h-[350px] w-[200px] h-[200px] relative flex-shrink-0"
+            className="mt-20 mb-14 md:my-0  md:w-[350px] md:h-[350px] w-[200px] h-[200px] relative flex-shrink-0"
           >
             <Image alt="an illustration of me" src="/me-xl.png" layout="fill" />
             <motion.div
