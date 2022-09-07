@@ -102,7 +102,7 @@ export const PinnedProjectCard = ({ project }: PinnedProjectCardProps) => {
           {project.tags.map((tag, idx) => (
             <div
               key={idx}
-              className="text-md font-bold text-pizza-box-white bg-pizza-box-grey   rounded-full p-2 h-auto"
+              className="text-md font-bold text-[#b3a799] bg-[#ede6df]  rounded-full p-2 h-auto"
             >
               <Tooltip message={tag}>
                 <TagIcon tag={tag} />
