@@ -108,7 +108,7 @@ export const GithubProject = ({
   return (
     <div className="flex w-full flex-col">
       <div className="flex flex-col gap-2">
-        <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-2 rounded-xl ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* <div className="pl-2 mt-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2 text-yellow-100">
                 <FaStar />
                 <span>Pinned Projects</span>
@@ -119,7 +119,7 @@ export const GithubProject = ({
               <PinnedProjectCard key={project.id} project={project} />
             ))}
         </div>
-        <div className="border-t dark:border-sky-700 border-gray-100 pt-2">
+        <div className="border-t border-gray-100 pt-10">
           {/* <div className="pl-2 mb-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2">
                 <span>Other Projects</span>
               </div> */}
