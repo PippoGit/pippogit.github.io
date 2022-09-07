@@ -22,7 +22,7 @@ export const ScrollToView = () => {
   return (
     <motion.div
       initial={{ opacity: 1 }}
-      animate={{ opacity: position > 150 ? 0 : 1 }}
+      animate={{ opacity: position > 50 ? 0 : 1 }}
       transition={{ duration: 0.25 }}
       className="flex flex-col items-center justify-center opacity-90 mt-40 md:mt-10"
     >
