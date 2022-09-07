@@ -31,7 +31,7 @@ export const Projects = ({
         <Work />
       </Section>
       <Section className="pt-2.5">
-        <p className="font-mono font-bold text-lg text[#b3a799] mb-5   p-4 rounded-xl">
+        <p className="font-mono font-bold text-lg text-[#b3a799] mb-5   p-4 rounded-xl">
           <span className="font-semibold">&gt;</span> projects --github
           --university
         </p>
