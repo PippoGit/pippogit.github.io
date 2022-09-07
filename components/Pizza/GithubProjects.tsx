@@ -119,7 +119,7 @@ export const GithubProject = ({
               <PinnedProjectCard key={project.id} project={project} />
             ))}
         </div>
-        <div className="border-t border-gray-100 pt-10">
+        <div className="pt-10">
           {/* <div className="pl-2 mb-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2">
                 <span>Other Projects</span>
               </div> */}
