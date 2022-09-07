@@ -41,7 +41,7 @@ export const Education = () => {
           <div className="w/20 md:max-w-[50%] md:pr-5 ">
             <Timeline events={timelineEvents} />
           </div>
-          <div className="md:w-[700px] md:h-[500px] w-[320px] h-[400px] relative">
+          <div className="w-[250px] h-[300px] md:w-[700px] md:h-[500px] sm:w-[320px] sm:h-[400px] relative">
             <Image
               src="/education.svg"
               layout="fill"

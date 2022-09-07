@@ -15,7 +15,7 @@ export const Contacts = () => {
             {"Let's Talk!"}
           </p>
         </div>
-        <div className="mx-auto w-[24rem] flex flex-col items-center gap-5 mt-5">
+        <div className="mx-auto max-w-[24rem] flex flex-col items-center gap-5 mt-5">
           <p className="text-lg text-justify font-bold">
             If you want to know more about me (or if you want to hire me 😉),
             please send me an email.

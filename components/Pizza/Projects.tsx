@@ -13,7 +13,7 @@ export const Projects = ({
     <div id="portfolio" className="w-full text-pizza-dark-green bg-[#fcfaf8] ">
       <div className="h-auto w-full bg-pizza-pattern  border-t-white border-y-4 border-b-[#fcfaf8] border-dashed py-10">
         <Section className="flex items-center justify-center ">
-          <p className="font-extrabold lg:text-9xl md:text-8xl sm:text-8xl text-7xl text-center tracking-wider text-white w-full p-5 fancy-text-shadow opacity-95 ">
+          <p className="font-extrabold lg:text-9xl md:text-8xl sm:text-8xl xs:text-7xl text-5xl text-center tracking-wider text-white w-full p-5 fancy-text-shadow opacity-95 ">
             Portfolio
           </p>
         </Section>
