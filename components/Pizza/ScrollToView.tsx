@@ -23,6 +23,7 @@ export const ScrollToView = () => {
   const position = useScrollPosition();
 
   useEffect(() => {
+    control.stop();
     if (position > 250) {
       control.start({
         opacity: 0,
@@ -38,9 +39,9 @@ export const ScrollToView = () => {
     <motion.div
       ref={ref}
       initial={{ opacity: 1 }}
-      transition={{ duration: 0.35 }}
+      transition={{ duration: 0.5 }}
       animate={control}
-      className="flex flex-col items-center justify-center opacity-90 mt-20"
+      className="flex flex-col items-center justify-center opacity-90 mt-40 md:mt-10"
     >
       <svg
         width="28"
