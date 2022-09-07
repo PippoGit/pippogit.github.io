@@ -1,10 +1,17 @@
 import React from "react";
 import { Education } from "./Education";
 import { Skills } from "./Skills";
+import { motion, useScroll } from "framer-motion";
 
 export const About = () => {
+  const { scrollYProgress } = useScroll();
+
   return (
-    <div className="bg-white antialiased w-full text-pizza-dark-green">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      className="bg-white antialiased w-full text-pizza-dark-green"
+    >
       <svg
         height="140"
         width="100%"
@@ -21,8 +28,30 @@ export const About = () => {
       {/* <Section>
         <p className="font-extrabold text-5xl text-pizza-red">About me</p>
       </Section> */}
-      <Education />
-      <Skills />
-    </div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3, delay: 0.4 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+      >
+        <Education />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+      >
+        <Skills />
+      </motion.div>
+    </motion.div>
   );
 };
