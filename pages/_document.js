@@ -10,6 +10,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap"
           rel="stylesheet"
         />
+        <meta name="theme-color" content="#e7fcea" />
       </Head>
       <body>
         <Main />
