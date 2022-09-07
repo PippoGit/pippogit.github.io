@@ -45,7 +45,7 @@ export const Hero = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
             variants={{
               visible: { opacity: 1, scale: 1 },
               hidden: { opacity: 0, scale: 0 },
@@ -54,8 +54,8 @@ export const Hero = () => {
           >
             <Image alt="an illustration of me" src="/me-xl.png" layout="fill" />
             <motion.div
-              animate={{ rotate: [-0, -30, 30, 0] }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              animate={{ rotate: [-0, -30, 30, 0], scale: [0, 1, 1, 1] }}
+              transition={{ duration: 0.75, delay: 0.5 }}
               className="md:text-8xl text-6xl absolute bottom-0"
             >
               👋🏻
