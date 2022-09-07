@@ -23,7 +23,7 @@ const Item = ({ item }: { item: Item }) => {
           {item.subtitle}
         </p>
       </div>
-      <FaChevronRight />
+      <FaChevronRight className="flex-shrink-0" />
     </button>
     // </a>
   );
