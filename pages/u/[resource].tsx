@@ -10,7 +10,7 @@ interface Resource extends ParsedUrlQuery {
 export default function Resource({ resource }: { resource: string }) {
   const router = useRouter();
   useEffect(() => {
-    router.push(`/university/${resource}.pdf`);
+    router.replace(`/university/${resource}.pdf`);
   }, [router, resource]);
 }
 
@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const arr = ["foodle", "home", "chat"];
+  const arr = ["foodle", "home", "chat", "peva", "hash", "color"];
   const paths = arr.map((res) => {
     return {
       params: { resource: res },

@@ -36,15 +36,26 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
     details:
       "A Computer Vision toy application that can be used to identify and classify food images by using CNN and features indices.",
   },
-  // CNNLayer
-  "228045961": {
-    title: "VHDL Convolutional Layer",
+  // AI
+
+  "154703124": {
+    title: "Neural Colour Comparison",
+    documentation: "color",
     details:
-      "VHDL hardware description of a convolutional layer to implement a CNN on FPGAs.",
-    tags: ["ai", "low-level"],
-    languages: ["VHDL"],
+      "A neural network that compares a master color spectrum to a copy spectrum in order to measure how similar they are.",
+    tags: ["ai"],
+    languages: ["MATLAB"],
     order: 4,
   },
+  // CNNLayer
+  // "228045961": {
+  //   title: "VHDL Convolutional Layer",
+  //   details:
+  //     "VHDL hardware description of a convolutional layer to implement a CNN on FPGAs.",
+  //   tags: ["ai", "low-level"],
+  //   languages: ["VHDL"],
+  //   order: 4,
+  // },
   // Delta Jobs
   // "81573983": { title: "", details: "", tags: ["web"] },
   // DistributedHashBreaker
