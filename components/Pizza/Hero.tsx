@@ -1,7 +1,7 @@
 import React from "react";
 import { Section } from "./Section";
 import Image from "next/image";
-import { FiEye } from "react-icons/fi";
+import { FiDownload, FiEye } from "react-icons/fi";
 import { Header } from "./Header";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -34,12 +34,20 @@ export const Hero = () => {
             <p className="text-pizza-lightest-green font-mono font-semibold mt-3 md:text-lg text-md">
               &gt; software engineer from 🇮🇹
             </p>
-            <Link href="#portfolio">
-              <button className="bg-pizza-bright-green px-5 py-2 text-lg rounded-xl mt-6 flex items-center gap-2 hover:bg-pizza-green active:ring-3 focus:ring-2 ring-pizza-light-green text-white">
-                <FiEye />
-                <span className="font-bold">see portfolio</span>
-              </button>
-            </Link>
+            <div className="flex gap-5 mt-10 md:mt-6 justify-center md:justify-start">
+              <Link href="#portfolio">
+                <button className="bg-pizza-bright-green px-5 py-2 text-lg rounded-xl flex items-center gap-2 hover:bg-pizza-green active:ring-3 focus:ring-2 ring-pizza-light-green text-white">
+                  <FiEye />
+                  <span className="font-bold">see portfolio</span>
+                </button>
+              </Link>
+              <Link href="/resume.pdf">
+                <button className="border-2 border-pizza-bright-green  hover:border-pizza-dark-green  px-5 py-2 text-lg rounded-xl flex items-center gap-2  active:ring-3 focus:ring-2 ring-pizza-light-green text-pizza-green hover:text-pizza-dark-green">
+                  <FiDownload />
+                  <span className="font-bold">get resume</span>
+                </button>
+              </Link>
+            </div>
           </div>
           <motion.div
             initial="hidden"
