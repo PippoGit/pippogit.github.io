@@ -86,7 +86,7 @@ export const PinnedProjectCard = ({ project }: PinnedProjectCardProps) => {
             </a>
             {project.documentation && (
               <a
-                href={`u/${project.documentation}`}
+                href={`university/${project.documentation}.pdf`}
                 target="_blank"
                 rel="noreferrer"
                 className="font-bold font-mono text-pizza-green text-sm  flex gap-2 items-center group opacity-70 hover:opacity-90"
