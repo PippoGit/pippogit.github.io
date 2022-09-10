@@ -20,6 +20,7 @@ interface PinnedProjectExtension {
   details: string;
   order: number;
   languages?: string[];
+  documentation?: string;
 }
 
 export type PinnedProject = GithubProject & PinnedProjectExtension;
@@ -31,6 +32,7 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
     languages: ["Java", "Javascript"],
     title: "Foodle",
     order: 1,
+    documentation: "foodle",
     details:
       "A Computer Vision toy application that can be used to identify and classify food images by using CNN and features indices.",
   },
@@ -52,6 +54,7 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
       "A distributed application that can be used to find collisions in hash functions and analyze the results with a web dashboard.",
     tags: ["cybersecurity"],
     languages: ["Java", "Javascript"],
+    documentation: "hash",
     order: 6,
   },
   // HOME
@@ -60,6 +63,7 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
     details: "A HOpefully sMart nEws aggregator powered by AI models.",
     tags: ["ai", "web"],
     languages: ["Python", "Javascript"],
+    documentation: "home",
     order: 2,
   },
   // WebSecure Chat
@@ -69,6 +73,7 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
       "A kind-of secure chat web application powered by node.js and forge",
     tags: ["cybersecurity", "web"],
     languages: ["Javascript"],
+    documentation: "chat",
     order: 3,
   },
   // RoundRobinCellularNetwork
@@ -78,6 +83,7 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
       "Omnet++ simulation of a Round-Robin algorithm to serve an LTE cellular network with a deep data analysis of the results.",
     tags: ["low-level"],
     languages: ["C++", "Python"],
+    documentation: "peva",
     order: 5,
   },
 };

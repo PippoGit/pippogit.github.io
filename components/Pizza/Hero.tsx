@@ -42,7 +42,7 @@ export const Hero = () => {
                 </button>
               </Link>
               <Link href="/resume.pdf">
-                <button className="border-2 border-pizza-bright-green  hover:border-pizza-dark-green  px-5 py-2 text-lg rounded-xl flex items-center gap-2  active:ring-3 focus:ring-2 ring-pizza-light-green text-pizza-green hover:text-pizza-dark-green">
+                <button className="border-2 border-pizza-lightest-green  hover:border-pizza-bright-green  px-5 py-2 text-lg rounded-xl flex items-center gap-2  active:ring-3 ring-opacity-50 focus:ring-2  ring-pizza-light-green text-pizza-green hover:text-pizza-green">
                   <FiDownload />
                   <span className="font-bold">get resume</span>
                 </button>

@@ -1,4 +1,5 @@
 import {
+  FaBook,
   FaChevronRight,
   FaExternalLinkAlt,
   FaGithub,
@@ -83,6 +84,17 @@ export const PinnedProjectCard = ({ project }: PinnedProjectCardProps) => {
               <span>&gt; see repo</span>
               <FaGithubAlt />
             </a>
+            {project.documentation && (
+              <a
+                href={`u/${project.documentation}`}
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold font-mono text-pizza-green text-sm  flex gap-2 items-center group opacity-70 hover:opacity-90"
+              >
+                <span>&gt; documentation</span>
+                <FaBook />
+              </a>
+            )}
           </div>
         </div>
         <div className="text-pizza-box-grey my-1 text-md font-bold px-0 pb-2 ">
