@@ -1,8 +1,9 @@
 import { List } from "../List";
 
-import { FaCode, FaMapPin, FaPinterest, FaStar } from "react-icons/fa";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
+import { Carousel } from "./Carousel";
 import { PinnedProjectCard } from "./PinnedProjectCard";
+import { motion } from "framer-motion";
 
 export interface GithubProject {
   id: number;
@@ -125,7 +126,7 @@ export const GithubProject = ({
   return (
     <div className="flex w-full flex-col">
       <div className="flex flex-col gap-2">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <div className="sm:grid grid-cols-1 sm:grid-cols-2 gap-10 hidden ">
           {/* <div className="pl-2 mt-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2 text-yellow-100">
                 <FaStar />
                 <span>Pinned Projects</span>
@@ -136,10 +137,23 @@ export const GithubProject = ({
               <PinnedProjectCard key={project.id} project={project} />
             ))}
         </div>
+        <div className="sm:hidden">
+          <Carousel length={pinned.length}>
+            {pinned
+              .sort((a, b) => a.order - b.order)
+              .map((project) => (
+                <motion.div
+                  initial={{ scale: 0.98, opacity: 0.8 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                  key={project.id}
+                  className="w-[40%] min-w-[20rem] flex-shrink-0 "
+                >
+                  <PinnedProjectCard project={project} />
+                </motion.div>
+              ))}
+          </Carousel>
+        </div>
         <div className="pt-10">
-          {/* <div className="pl-2 mb-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2">
-                <span>Other Projects</span>
-              </div> */}
           <List
             items={others.map((p) => ({
               title: p.name,

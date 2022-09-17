@@ -19,12 +19,6 @@ export const Projects = ({
         </Section>
       </div>
       <Section>
-        {/* <p className="font-mono font-bold text-2xl text-pizza-box-grey mb-5 opacity-40">
-          &gt; projects --work
-        </p> */}
-        {/* <p className="font-mono font-bold text-xl text-slate-400 mb-5  bg-slate-900 p-5 rounded-xl">
-          &gt; projects --work
-        </p> */}
         <p className="font-mono font-bold text-lg text-[#b3a799] mb-5   p-4 rounded-xl">
           <span className="font-semibold">&gt;</span> projects --work
         </p>
