@@ -134,10 +134,10 @@ export const GithubProject = ({
         </div>
         <div className="pt-10">
           <List
-            items={others.map((p) => ({
-              title: p.name,
-              subtitle: p.description,
-              url: p.html_url,
+            items={others.map((project) => ({
+              title: project.name,
+              subtitle: project.description,
+              url: project.html_url,
             }))}
           />
         </div>

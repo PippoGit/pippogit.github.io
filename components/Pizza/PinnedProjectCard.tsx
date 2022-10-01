@@ -1,8 +1,5 @@
 import {
   FaBook,
-  FaChevronRight,
-  FaExternalLinkAlt,
-  FaGithub,
   FaGithubAlt,
   FaGlobe,
   FaLock,

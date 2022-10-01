@@ -1,7 +1,6 @@
 import useEmblaCarousel from "embla-carousel-react";
 import React, { ReactNode, useCallback, useEffect, useState } from "react";
 import { ReactElement } from "react-markdown/lib/react-markdown";
-import { motion } from "framer-motion";
 
 export const Carousel = ({
   children,
@@ -77,13 +76,9 @@ const PrevButton = ({ onClick }: { onClick: () => void }) => {
 
 export const CarouselCard = ({ children }: { children: ReactElement }) => {
   return (
-    <motion.div
-      initial={{ scale: 0.98, opacity: 0.8 }}
-      whileHover={{ scale: 1, opacity: 1 }}
-      className="embla__slide flex-grow-0 flex-shrink-0 basis-[80%] h-auto"
-    >
+    <div className="embla__slide flex-grow-0 flex-shrink-0 basis-[80%] h-auto">
       {children}
-    </motion.div>
+    </div>
   );
 };
 
