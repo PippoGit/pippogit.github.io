@@ -1,9 +1,9 @@
 import { List } from "../List";
 
 import { useMemo } from "react";
-import { Carousel } from "./Carousel";
+
+import { Carousel, CarouselCard } from "./Carousel";
 import { PinnedProjectCard } from "./PinnedProjectCard";
-import { motion } from "framer-motion";
 
 export interface GithubProject {
   id: number;
@@ -48,18 +48,6 @@ const pinnedProjects: Record<string, PinnedProjectExtension> = {
     languages: ["MATLAB"],
     order: 4,
   },
-  // CNNLayer
-  // "228045961": {
-  //   title: "VHDL Convolutional Layer",
-  //   details:
-  //     "VHDL hardware description of a convolutional layer to implement a CNN on FPGAs.",
-  //   tags: ["ai", "low-level"],
-  //   languages: ["VHDL"],
-  //   order: 4,
-  // },
-  // Delta Jobs
-  // "81573983": { title: "", details: "", tags: ["web"] },
-  // DistributedHashBreaker
   "217676570": {
     title: "Distributed Hash Breaker",
     details:
@@ -127,10 +115,6 @@ export const GithubProject = ({
     <div className="flex w-full flex-col">
       <div className="flex flex-col gap-2">
         <div className="sm:grid grid-cols-1 sm:grid-cols-2 gap-10 hidden ">
-          {/* <div className="pl-2 mt-2 font-bold font-mono text-xs uppercase sm:col-span-2 flex items-center gap-2 text-yellow-100">
-                <FaStar />
-                <span>Pinned Projects</span>
-              </div> */}
           {pinned
             .sort((a, b) => a.order - b.order)
             .map((project) => (
@@ -138,18 +122,13 @@ export const GithubProject = ({
             ))}
         </div>
         <div className="sm:hidden">
-          <Carousel length={pinned.length}>
+          <Carousel>
             {pinned
               .sort((a, b) => a.order - b.order)
               .map((project) => (
-                <motion.div
-                  initial={{ scale: 0.98, opacity: 0.8 }}
-                  whileHover={{ scale: 1, opacity: 1 }}
-                  key={project.id}
-                  className="w-[40%] min-w-[20rem] flex-shrink-0 "
-                >
+                <CarouselCard key={project.id}>
                   <PinnedProjectCard project={project} />
-                </motion.div>
+                </CarouselCard>
               ))}
           </Carousel>
         </div>
