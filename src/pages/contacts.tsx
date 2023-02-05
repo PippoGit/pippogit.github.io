@@ -13,7 +13,7 @@ const Contacts: NextPage = () => {
       <Head>
         <title>PippoGit</title>
         <meta name="description" content="a software engineer from italy" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="flex min-h-screen justify-center gap-32 bg-zinc-900 p-20">
         <Navigation />

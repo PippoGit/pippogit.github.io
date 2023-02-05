@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
-import { GithubLinkButton } from "../components/GithubLinkButton";
 
 import { Navigation } from "../components/Navigation";
 import { UniversityProjects } from "../components/UniversityProjects";
@@ -65,7 +64,7 @@ const Projects: NextPage = () => {
       <Head>
         <title>PippoGit</title>
         <meta name="description" content="a software engineer from italy" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="flex min-h-screen justify-center gap-32 bg-zinc-900 p-20">
         <Navigation />
