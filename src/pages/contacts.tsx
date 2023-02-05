@@ -1,12 +1,11 @@
-import { Download, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AvatarCard } from "../components/AvatarCard";
 import { GithubLinkButton } from "../components/GithubLinkButton";
 
+import { ContactForm } from "../components/ContactForm";
 import { ExternalLinkButton } from "../components/ExternalLinkButton";
 import { Navigation } from "../components/Navigation";
-import { ContactForm } from "../components/ContactForm";
 
 const Contacts: NextPage = () => {
   return (

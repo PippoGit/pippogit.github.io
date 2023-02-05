@@ -9,18 +9,22 @@ export function ContactForm() {
 
   const sendMessageMutation = api.mail.send.useMutation();
 
-  console.log(sendMessageMutation);
-
-  const sendMessage = () => {
+  const onSubmit = () => {
     sendMessageMutation.mutate({ name, email, body });
   };
+
+  if (sendMessageMutation.isSuccess) {
+    return (
+      <div className="text-lg text-zinc-400">Message sent! Thank you!</div>
+    );
+  }
 
   return (
     <form
       className="flex w-full flex-col gap-4"
       onSubmit={(event) => {
         event.preventDefault();
-        sendMessage();
+        onSubmit();
       }}
     >
       <div className="flex w-full flex-col gap-1">
@@ -67,19 +71,18 @@ export function ContactForm() {
         />
       </div>
 
-      <div className="font-light  text-zinc-400">
-        <p className="text-sm tracking-wide text-zinc-400">
-          {
-            "All your data and stuff are all safe, don't worry. Oh, I'm afraid I will need some of those cookies, you know just another day in the internet."
-          }
-        </p>
-      </div>
       <button
         disabled={sendMessageMutation.isLoading}
         className="text-md flex flex-grow-0 items-center justify-center gap-4 rounded-lg bg-pink-700 p-2 font-semibold tracking-wide text-pink-100 hover:bg-pink-800"
       >
-        <Send size="1em" className="text-pink-200" />
-        <span>Send your message</span>
+        {sendMessageMutation.isLoading ? (
+          <span>Sending...</span>
+        ) : (
+          <>
+            <Send size="1em" className="text-pink-200" />
+            <span>Send your message</span>
+          </>
+        )}
       </button>
     </form>
   );
