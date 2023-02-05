@@ -21,6 +21,9 @@ const Education: NextPage = () => {
           </h1>
 
           <div className="flex flex-col items-start gap-4">
+            <div className="font-light  text-zinc-400">
+              <p className="text-lg tracking-wide">Degrees and stuff:</p>
+            </div>
             <EducationItem
               icon={<GraduationCap />}
               degree="MSc in Computer Engineering"
@@ -30,6 +33,7 @@ const Education: NextPage = () => {
               grade={"110/110 cum laude"}
               thesis="Design and development of a visual anomaly detection system based on attention."
             />
+
             <EducationItem
               icon={<GraduationCap />}
               degree="BSc in Computer Engineering"
@@ -76,7 +80,7 @@ function EducationItem({
   return (
     <div className="flex w-full items-start gap-4 rounded-lg bg-zinc-800 p-3 px-4">
       <Icon as={icon} className="mt-1 flex-shrink-0 flex-grow-0" />
-      <div className="flex w-full flex-col items-start text-sm text-zinc-500">
+      <div className="flex w-full flex-col items-start text-sm text-zinc-400">
         <p className="font-semibold tracking-wide ">
           {degree}
           <span className="font-regular text-zinc-500">{" at "}</span>
