@@ -1,5 +1,5 @@
-import { SMTPClient } from "emailjs";
 import { z } from "zod";
+import nodemailer from "nodemailer";
 
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
@@ -11,18 +11,23 @@ const inputMail = z.object({
 
 export const mailRouter = createTRPCRouter({
   send: publicProcedure.input(inputMail).mutation(async ({ input }) => {
-    const client = new SMTPClient({
-      user: process.env.EMAIL,
-      password: process.env.EMAIL_PASSWORD,
+    const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
-      ssl: true,
+      port: 587,
+      secure: false,
+      requireTLS: true,
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD,
+      },
+      logger: true,
     });
 
-    const res = await client.sendAsync({
-      text: input.body,
-      from: input.email,
-      to: process.env.EMAIL ?? "",
+    const res = await transporter.sendMail({
+      from: `${input.name} <${input.email}>`,
+      to: process.env.EMAIL,
       subject: `A message from ${input.name} - ${input.email}`,
+      text: input.body,
     });
 
     return res
