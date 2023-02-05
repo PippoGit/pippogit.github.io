@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AvatarCard } from "../components/AvatarCard";
@@ -6,8 +6,9 @@ import { GithubLinkButton } from "../components/GithubLinkButton";
 
 import { ExternalLinkButton } from "../components/ExternalLinkButton";
 import { Navigation } from "../components/Navigation";
+import { ContactForm } from "../components/ContactForm";
 
-const Home: NextPage = () => {
+const Contacts: NextPage = () => {
   return (
     <>
       <Head>
@@ -19,36 +20,29 @@ const Home: NextPage = () => {
         <Navigation />
         <main className="container max-w-lg">
           <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
-            Filippo Scotto
+            Contacts
           </h1>
 
           <div className="flex flex-col items-start gap-4">
             <div className="font-light  text-zinc-400">
               <p className="text-lg tracking-wide">
-                Hello, my name is Filippo. I make stuff with modern web
-                technologies and machine learning.
+                If you want to know more about me, please send me an email.
               </p>
             </div>
 
-            <AvatarCard />
+            <ContactForm />
 
-            <div className="font-light  text-zinc-400">
-              <p className="text-zinc-500">
-                I&apos;m a{" "}
-                <span className="font-semibold">
-                  full stack software engineer
-                </span>{" "}
-                who loves to work with web technologies such as{" "}
-                <span className="font-semibold">React and NextJS</span>, but I
-                also have a solid academic background in computer engineering,
-                machine learning, and networking.
+            <div className="mt-2 w-full border-t border-zinc-800 pt-4 text-zinc-400">
+              <p className="text-md tracking-wide text-zinc-400">
+                {"By the way, you can also find me here:"}
               </p>
             </div>
+
             <div className="flex w-full items-center justify-start gap-8">
               <ExternalLinkButton
-                icon={<Download />}
-                href={"/resume.pdf"}
-                label="Get Resume"
+                icon={<Mail />}
+                href={"@mailto:filipscotto@gmail.com"}
+                label="filipscotto@gmail.com"
                 target="_blank"
               />
               <GithubLinkButton />
@@ -60,4 +54,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Contacts;
