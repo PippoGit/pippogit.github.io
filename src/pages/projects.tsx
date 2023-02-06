@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
-import { Navigation } from "../components/Navigation";
+import { PageContent } from "../components/PageContent";
 import { UniversityProjects } from "../components/UniversityProjects";
 
 interface WorkProject {
@@ -66,25 +66,19 @@ const Projects: NextPage = () => {
         <meta name="description" content="a software engineer from italy" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="flex min-h-screen flex-col items-center gap-10 bg-zinc-900 p-10 md:flex-row md:items-start md:justify-center md:gap-32 md:p-20">
-        <Navigation />
-        <main className="container max-w-lg">
-          <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
-            Projects
-          </h1>
-          <div className="flex flex-col items-start gap-4">
-            <div className="font-light  text-zinc-400">
-              <p className="text-lg tracking-wide">
-                Work and university projects:
-              </p>
-            </div>
-            {workProjects.map((project) => (
-              <ProjectsItem key={project.id} project={project} />
-            ))}
-            <UniversityProjects />
+      <PageContent title="Projects">
+        <div className="flex flex-col items-start gap-4">
+          <div className="font-light  text-zinc-400">
+            <p className="text-lg tracking-wide">
+              Work and university projects:
+            </p>
           </div>
-        </main>
-      </div>
+          {workProjects.map((project) => (
+            <ProjectsItem key={project.id} project={project} />
+          ))}
+          <UniversityProjects />
+        </div>
+      </PageContent>
     </>
   );
 };

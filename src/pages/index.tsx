@@ -5,7 +5,7 @@ import { AvatarCard } from "../components/AvatarCard";
 import { GithubLinkButton } from "../components/GithubLinkButton";
 
 import { ExternalLinkButton } from "../components/ExternalLinkButton";
-import { Navigation } from "../components/Navigation";
+import { PageContent } from "../components/PageContent";
 
 const Home: NextPage = () => {
   return (
@@ -15,47 +15,36 @@ const Home: NextPage = () => {
         <meta name="description" content="a software engineer from italy" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="flex min-h-screen flex-col items-center gap-10 bg-zinc-900 p-10 md:flex-row md:items-start md:justify-center md:gap-32 md:p-20">
-        <Navigation />
-        <main className="container max-w-lg">
-          <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
-            Filippo Scotto
-          </h1>
+      <PageContent title="Filippo Scotto">
+        <div className="font-light  text-zinc-400">
+          <p className="text-lg tracking-wide">
+            Hello, my name is Filippo. I make stuff with modern web technologies
+            and machine learning.
+          </p>
+        </div>
 
-          <div className="flex flex-col items-start gap-4">
-            <div className="font-light  text-zinc-400">
-              <p className="text-lg tracking-wide">
-                Hello, my name is Filippo. I make stuff with modern web
-                technologies and machine learning.
-              </p>
-            </div>
+        <AvatarCard />
 
-            <AvatarCard />
-
-            <div className="font-light  text-zinc-400">
-              <p className="text-zinc-500">
-                I&apos;m a{" "}
-                <span className="font-semibold">
-                  full stack software engineer
-                </span>{" "}
-                who loves to work with web technologies such as{" "}
-                <span className="font-semibold">React and NextJS</span>, but I
-                also have a solid academic background in computer engineering,
-                machine learning, and networking.
-              </p>
-            </div>
-            <div className="flex w-full flex-col justify-start  gap-4 md:flex-row md:items-center md:gap-8">
-              <ExternalLinkButton
-                icon={<Download />}
-                href={"/resume.pdf"}
-                label="Get Resume"
-                target="_blank"
-              />
-              <GithubLinkButton />
-            </div>
-          </div>
-        </main>
-      </div>
+        <div className="font-light  text-zinc-400">
+          <p className="text-zinc-500">
+            I&apos;m a{" "}
+            <span className="font-semibold">full stack software engineer</span>{" "}
+            who loves to work with web technologies such as{" "}
+            <span className="font-semibold">React and NextJS</span>, but I also
+            have a solid academic background in computer engineering, machine
+            learning, and networking.
+          </p>
+        </div>
+        <div className="flex w-full flex-col justify-start  gap-4 md:flex-row md:items-center md:gap-8">
+          <ExternalLinkButton
+            icon={<Download />}
+            href={"/resume.pdf"}
+            label="Get Resume"
+            target="_blank"
+          />
+          <GithubLinkButton />
+        </div>
+      </PageContent>
     </>
   );
 };

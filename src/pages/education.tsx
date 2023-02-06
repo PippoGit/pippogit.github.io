@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import type { ReactElement } from "react";
 import { Icon } from "../components/Icon";
-import { Navigation } from "../components/Navigation";
+import { PageContent } from "../components/PageContent";
 
 const Education: NextPage = () => {
   return (
@@ -13,47 +13,38 @@ const Education: NextPage = () => {
         <meta name="description" content="a software engineer from italy" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="flex min-h-screen flex-col items-center gap-10 bg-zinc-900 p-10 md:flex-row md:items-start md:justify-center md:gap-32 md:p-20">
-        <Navigation />
-        <main className="container max-w-lg">
-          <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
-            Education
-          </h1>
+      <PageContent title="Education">
+        <div className="font-light  text-zinc-400">
+          <p className="text-lg tracking-wide">Degrees and stuff:</p>
+        </div>
+        <EducationItem
+          icon={<GraduationCap />}
+          degree="MSc in Computer Engineering"
+          institute="University of Pisa"
+          instituteUrl="https://www.unipi.it"
+          year={2021}
+          grade={"110/110 cum laude"}
+          thesis="Design and development of a visual anomaly detection system based on attention."
+        />
 
-          <div className="flex flex-col items-start gap-4">
-            <div className="font-light  text-zinc-400">
-              <p className="text-lg tracking-wide">Degrees and stuff:</p>
-            </div>
-            <EducationItem
-              icon={<GraduationCap />}
-              degree="MSc in Computer Engineering"
-              institute="University of Pisa"
-              instituteUrl="https://www.unipi.it"
-              year={2021}
-              grade={"110/110 cum laude"}
-              thesis="Design and development of a visual anomaly detection system based on attention."
-            />
-
-            <EducationItem
-              icon={<GraduationCap />}
-              degree="BSc in Computer Engineering"
-              institute="University of Pisa"
-              instituteUrl="https://www.unipi.it"
-              grade={"101/110"}
-              year={2017}
-              thesis="Computational Stigmery applications to detect New York City's hotspots through pick up and drop off events of taxi races."
-            />
-            <EducationItem
-              icon={<GraduationCap />}
-              degree="Secondary School Diploma in IT"
-              institute="ITI G. Galilei Livorno"
-              instituteUrl="https://www.galileilivorno.edu.it/"
-              grade={"100/100"}
-              year={2013}
-            />
-          </div>
-        </main>
-      </div>
+        <EducationItem
+          icon={<GraduationCap />}
+          degree="BSc in Computer Engineering"
+          institute="University of Pisa"
+          instituteUrl="https://www.unipi.it"
+          grade={"101/110"}
+          year={2017}
+          thesis="Computational Stigmery applications to detect New York City's hotspots through pick up and drop off events of taxi races."
+        />
+        <EducationItem
+          icon={<GraduationCap />}
+          degree="Secondary School Diploma in IT"
+          institute="ITI G. Galilei Livorno"
+          instituteUrl="https://www.galileilivorno.edu.it/"
+          grade={"100/100"}
+          year={2013}
+        />
+      </PageContent>
     </>
   );
 };

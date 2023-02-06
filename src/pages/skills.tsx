@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import type { ReactElement } from "react";
 import { Icon } from "../components/Icon";
-import { Navigation } from "../components/Navigation";
+import { PageContent } from "../components/PageContent";
 
 const Skills: NextPage = () => {
   return (
@@ -13,37 +13,28 @@ const Skills: NextPage = () => {
         <meta name="description" content="a software engineer from italy" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="flex min-h-screen flex-col items-center gap-10 bg-zinc-900 p-10 md:flex-row md:items-start md:justify-center md:gap-32 md:p-20">
-        <Navigation />
-        <main className="container max-w-lg">
-          <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
-            Skills
-          </h1>
+      <PageContent title="Skills">
+        <div className="font-light  text-zinc-400">
+          <p className="text-lg tracking-wide">Full-Stack Knowledge!</p>
+        </div>
+        <SkillsItem icon={<Cpu />} topic="Low-level" skills="C, C++" />
 
-          <div className="flex flex-col items-start gap-4">
-            <div className="font-light  text-zinc-400">
-              <p className="text-lg tracking-wide">Full-Stack Knowledge!</p>
-            </div>
-            <SkillsItem icon={<Cpu />} topic="Low-level" skills="C, C++" />
-
-            <SkillsItem
-              icon={<Server />}
-              topic="Backend"
-              skills="PHP, Laravel, NodeJS, Java, Python, GraphQL"
-            />
-            <SkillsItem
-              icon={<Layout />}
-              topic="Frontend"
-              skills="Javascript, TypeScript, React, NextJS, Tailwind"
-            />
-            <SkillsItem
-              icon={<Bot />}
-              topic="AI and Data Engineering"
-              skills="Pandas, SciKit, PyTorch, Numpy"
-            />
-          </div>
-        </main>
-      </div>
+        <SkillsItem
+          icon={<Server />}
+          topic="Backend"
+          skills="PHP, Laravel, NodeJS, Java, Python, GraphQL"
+        />
+        <SkillsItem
+          icon={<Layout />}
+          topic="Frontend"
+          skills="Javascript, TypeScript, React, NextJS, Tailwind"
+        />
+        <SkillsItem
+          icon={<Bot />}
+          topic="AI and Data Engineering"
+          skills="Pandas, SciKit, PyTorch, Numpy"
+        />
+      </PageContent>
     </>
   );
 };
