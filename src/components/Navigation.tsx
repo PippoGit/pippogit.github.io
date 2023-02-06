@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Navigation() {
   return (
-    <nav className="flex w-full max-w-lg flex-row flex-wrap items-center justify-center gap-1 font-semibold text-zinc-700 md:w-10 md:flex-col md:items-start md:justify-start">
+    <nav className="flex w-full max-w-[15rem] flex-row flex-wrap items-center justify-center gap-1 font-semibold text-zinc-700 md:w-10 md:flex-col md:items-start md:justify-start">
       <Code2
         size="3rem"
         className="mb-4 mr-4 w-full flex-shrink-0 text-pink-800 md:mr-0 md:mb-2 md:ml-2 md:w-auto"

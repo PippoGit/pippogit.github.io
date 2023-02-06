@@ -15,7 +15,7 @@ const Contacts: NextPage = () => {
         <meta name="description" content="a software engineer from italy" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="flex min-h-screen flex-col gap-10 bg-zinc-900 p-10 md:flex-row md:justify-center md:gap-32 md:p-20">
+      <div className="flex min-h-screen flex-col items-center gap-10 bg-zinc-900 p-10 md:flex-row md:items-start md:justify-center md:gap-32 md:p-20">
         <Navigation />
         <main className="container max-w-lg">
           <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
@@ -37,7 +37,7 @@ const Contacts: NextPage = () => {
               </p>
             </div>
 
-            <div className="flex w-full items-center justify-start gap-8">
+            <div className="flex w-full flex-col justify-start  gap-4 md:flex-row md:items-center md:gap-8">
               <ExternalLinkButton
                 icon={<Mail />}
                 href={"@mailto:filipscotto@gmail.com"}
