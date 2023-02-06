@@ -13,7 +13,7 @@ const Skills: NextPage = () => {
         <meta name="description" content="a software engineer from italy" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="flex min-h-screen justify-center gap-32 bg-zinc-900 p-20">
+      <div className="flex min-h-screen flex-col gap-10 bg-zinc-900 p-10 md:flex-row md:justify-center md:gap-32 md:p-20">
         <Navigation />
         <main className="container max-w-lg">
           <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
