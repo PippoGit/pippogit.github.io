@@ -85,7 +85,7 @@ function EducationItem({
         <p className="font-semibold text-zinc-600">
           {grade} - {year}
         </p>
-        {thesis && <p className="mt-1 text-base  text-zinc-400">{thesis}</p>}
+        {thesis && <p className="mt-1 text-sm  text-zinc-400">{thesis}</p>}
       </div>
     </div>
   );

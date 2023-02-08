@@ -5,7 +5,7 @@ export function GithubLinkButton() {
   return (
     <ExternalLinkButton
       icon={<Github />}
-      label="Github Profile"
+      label="Github"
       href="https://github.com/pippogit"
       target="_blank"
     />

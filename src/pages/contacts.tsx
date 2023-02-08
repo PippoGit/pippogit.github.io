@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { GithubLinkButton } from "../components/GithubLinkButton";
@@ -33,9 +33,9 @@ const Contacts: NextPage = () => {
 
           <div className="flex w-full flex-col justify-start  gap-4 md:flex-row md:items-center md:gap-8">
             <ExternalLinkButton
-              icon={<Mail />}
-              href={"@mailto:filipscotto@gmail.com"}
-              label="filipscotto@gmail.com"
+              icon={<Linkedin />}
+              href={"https://www.linkedin.com/in/filippo-undefined-248034262/"}
+              label="LinkedIn"
               target="_blank"
             />
             <GithubLinkButton />

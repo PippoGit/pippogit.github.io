@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, Linkedin } from "lucide-react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AvatarCard } from "../components/AvatarCard";
@@ -43,6 +43,12 @@ const Home: NextPage = () => {
             target="_blank"
           />
           <GithubLinkButton />
+          <ExternalLinkButton
+            icon={<Linkedin />}
+            href={"https://www.linkedin.com/in/filippo-undefined-248034262/"}
+            label="LinkedIn"
+            target="_blank"
+          />
         </div>
       </PageContent>
     </>
