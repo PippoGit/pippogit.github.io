@@ -2,6 +2,7 @@ import { GraduationCap } from "lucide-react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import type { ReactElement } from "react";
+
 import { Icon } from "../components/Icon";
 import { PageContent } from "../components/PageContent";
 
@@ -25,6 +26,7 @@ const Education: NextPage = () => {
           year={2021}
           grade={"110/110 cum laude"}
           thesis="Design and development of a visual anomaly detection system based on attention."
+          thesisUrl="/university/msc_thesis.pdf"
         />
 
         <EducationItem
@@ -56,6 +58,7 @@ interface EducationItemProps {
   instituteUrl: string;
   year: number;
   thesis?: string;
+  thesisUrl?: string;
   grade: string;
 }
 
@@ -66,15 +69,15 @@ function EducationItem({
   instituteUrl,
   year,
   thesis,
+  thesisUrl,
   grade,
 }: EducationItemProps) {
   return (
     <div className="flex w-full items-start gap-4 rounded-lg bg-zinc-800 p-3 px-4">
       <Icon as={icon} className="mt-1 flex-shrink-0 flex-grow-0" />
       <div className="flex w-full flex-col items-start text-sm text-zinc-400">
-        <p className="font-semibold tracking-wide ">
-          {degree}
-          <span className="font-regular text-zinc-500">{" at "}</span>
+        <p className="font-semibold tracking-wide text-zinc-300">{degree}</p>
+        <p>
           <a
             href={instituteUrl}
             className="font-semibold text-zinc-400 after:content-['_↗'] hover:text-zinc-300"
@@ -82,10 +85,20 @@ function EducationItem({
             {institute}
           </a>
         </p>
-        <p className="font-semibold text-zinc-600">
+        <p className="font-semibold text-zinc-500">
           {grade} - {year}
         </p>
-        {thesis && <p className="mt-1 text-sm  text-zinc-400">{thesis}</p>}
+        {thesis && <p className="mt-1 text-zinc-400">{thesis}</p>}
+        {thesisUrl && (
+          <div className="mt-2 flex w-full justify-end gap-4">
+            <a
+              href={thesisUrl}
+              className="rounded-full bg-zinc-700 px-3 py-1 text-xs font-semibold text-zinc-400 after:content-['_↗'] hover:bg-zinc-600 hover:text-zinc-300"
+            >
+              PDF Thesis
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
