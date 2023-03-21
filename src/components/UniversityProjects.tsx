@@ -90,7 +90,7 @@ const pinnedProjects: UniversityProject[] = [
 ];
 
 export function UniversityProjects() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   const variants = {
     initial: {

@@ -27,6 +27,7 @@ const Education: NextPage = () => {
           grade={"110/110 cum laude"}
           thesis="Design and development of a visual anomaly detection system based on attention."
           thesisUrl="/university/msc_thesis.pdf"
+          slidesUrl="/university/msc_slides.pdf"
         />
 
         <EducationItem
@@ -59,6 +60,7 @@ interface EducationItemProps {
   year: number;
   thesis?: string;
   thesisUrl?: string;
+  slidesUrl?: string;
   grade: string;
 }
 
@@ -70,6 +72,7 @@ function EducationItem({
   year,
   thesis,
   thesisUrl,
+  slidesUrl,
   grade,
 }: EducationItemProps) {
   return (
@@ -96,6 +99,12 @@ function EducationItem({
               className="rounded-full bg-zinc-700 px-3 py-1 text-xs font-semibold text-zinc-400 after:content-['_↗'] hover:bg-zinc-600 hover:text-zinc-300"
             >
               PDF Thesis
+            </a>
+            <a
+              href={slidesUrl}
+              className="rounded-full bg-zinc-700 px-3 py-1 text-xs font-semibold text-zinc-400 after:content-['_↗'] hover:bg-zinc-600 hover:text-zinc-300"
+            >
+              Slides
             </a>
           </div>
         )}
