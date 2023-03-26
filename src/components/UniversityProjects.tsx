@@ -1,3 +1,4 @@
+"use client";
 import {
   ChevronDown,
   ChevronRight,
@@ -7,6 +8,7 @@ import {
 import { useState } from "react";
 import { Icon } from "./Icon";
 
+import type { Variants } from "framer-motion";
 import { AnimatePresence, motion } from "framer-motion";
 
 type ProjectTag = "ai" | "web" | "low-level" | "cybersecurity";
@@ -91,23 +93,21 @@ const pinnedProjects: UniversityProject[] = [
 
 export function UniversityProjects() {
   const [isExpanded, setIsExpanded] = useState(true);
-
-  const variants = {
-    initial: {
-      height: 0,
-      opacity: 0,
-    },
-    animate: {
+  const variants: Variants = {
+    visible: {
       height: "auto",
+      y: "0",
       opacity: 1,
+      transition: {
+        type: "just",
+      },
     },
     exit: {
-      height: 0,
+      height: "auto",
+      y: "-100%",
       opacity: 0,
       transition: {
-        type: "tween",
-        duration: 0.15,
-        ease: "circOut",
+        type: "spring",
       },
     },
   };
@@ -122,21 +122,24 @@ export function UniversityProjects() {
         <p className="w-full text-sm font-semibold">University Projects</p>
         <Icon as={isExpanded ? <ChevronUp /> : <ChevronDown />} />
       </div>
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial="hidden"
-            exit="exit"
-            animate="visible"
-            variants={variants}
-            className="flex flex-col gap-2"
-          >
-            {pinnedProjects.map((project) => (
-              <ProjectsItem key={project.id} project={project} />
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className="overflow-hidden">
+        <AnimatePresence mode="sync">
+          {isExpanded && (
+            <motion.div
+              key="uni-projects"
+              exit="exit"
+              animate="visible"
+              variants={variants}
+              initial={{ y: "0", height: 0, opacity: 1 }}
+              className="flex flex-col gap-2"
+            >
+              {pinnedProjects.map((project) => (
+                <ProjectsItem key={project.id} project={project} />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

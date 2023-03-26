@@ -1,3 +1,4 @@
+"use client";
 import { Send } from "lucide-react";
 import { api } from "../utils/api";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,6 +10,9 @@ import type { ReactNode } from "react";
 
 import type { ContactsSchemaInput } from "../server/zod-schemas";
 import { contactsSchema } from "../server/zod-schemas";
+import { AnimatePresence } from "framer-motion";
+
+import { motion } from "framer-motion";
 
 export function ContactForm() {
   const sendMessageMutation = api.mail.send.useMutation();
@@ -21,41 +25,63 @@ export function ContactForm() {
     sendMessageMutation.mutate(values);
   };
 
-  if (sendMessageMutation.isSuccess) {
-    return (
-      <div className="text-lg text-zinc-400">Message sent! Thank you!</div>
-    );
-  }
-
   return (
-    <FormProvider {...methods}>
-      <form
-        className="flex w-full flex-col gap-4"
-        // eslint-disable-next-line @typescript-eslint/no-misused-promises
-        onSubmit={handleSubmit(onSubmitHandler)}
-      >
-        <FormInput name="name" label="Your name" />
-        <FormInput name="email" label="Your email" type="email" />
-        <FormTextarea name="body" label="Your message" />
-
-        <button
-          disabled={sendMessageMutation.isLoading}
-          className="text-md flex flex-grow-0 items-center justify-center gap-4 rounded-lg bg-pink-700 p-2 font-semibold tracking-wide text-pink-100 hover:bg-pink-800"
+    <AnimatePresence mode="sync">
+      {sendMessageMutation.isSuccess ? (
+        <div className="w-full text-lg text-zinc-400">
+          Message sent! Thank you!
+        </div>
+      ) : (
+        <motion.div
+          key="form-contacts"
+          exit={{
+            opacity: 0,
+            height: 0,
+          }}
+          initial={{ opacity: 0, height: 0 }}
+          animate={{
+            opacity: 1,
+            height: "auto",
+          }}
+          transition={{
+            type: "just",
+          }}
+          className="w-full"
         >
-          {sendMessageMutation.isLoading ? (
-            <>
-              <Spinner />
-              <span>Sending</span>
-            </>
-          ) : (
-            <>
-              <Send size="1em" className="text-pink-200" />
-              <span>Send your message</span>
-            </>
-          )}
-        </button>
-      </form>
-    </FormProvider>
+          <FormProvider {...methods}>
+            <div className="mb-2  font-light text-zinc-400">
+              <p className="text-lg tracking-wide">{"Let's keep in touch!"}</p>
+            </div>
+            <form
+              className="flex w-full flex-col gap-4"
+              // eslint-disable-next-line @typescript-eslint/no-misused-promises
+              onSubmit={handleSubmit(onSubmitHandler)}
+            >
+              <FormInput name="name" label="Your name" />
+              <FormInput name="email" label="Your email" type="email" />
+              <FormTextarea name="body" label="Your message" />
+
+              <button
+                disabled={sendMessageMutation.isLoading}
+                className="text-md flex flex-grow-0 items-center justify-center gap-4 rounded-lg bg-pink-700 p-2 font-semibold tracking-wide text-pink-100 hover:bg-pink-800"
+              >
+                {sendMessageMutation.isLoading ? (
+                  <>
+                    <Spinner />
+                    <span>Sending</span>
+                  </>
+                ) : (
+                  <>
+                    <Send size="1em" className="text-pink-200" />
+                    <span>Send your message</span>
+                  </>
+                )}
+              </button>
+            </form>
+          </FormProvider>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 

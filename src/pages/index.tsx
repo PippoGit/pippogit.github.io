@@ -1,3 +1,4 @@
+"use client";
 import { Download, Linkedin } from "lucide-react";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -6,6 +7,7 @@ import { GithubLinkButton } from "../components/GithubLinkButton";
 
 import { ExternalLinkButton } from "../components/ExternalLinkButton";
 import { PageContent } from "../components/PageContent";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Home: NextPage = () => {
   return (
@@ -23,33 +25,52 @@ const Home: NextPage = () => {
           </p>
         </div>
 
-        <AvatarCard />
+        <AnimatePresence>
+          <motion.div
+            className="flex w-full flex-col gap-4"
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              type: "just",
+            }}
+          >
+            <AvatarCard />
 
-        <div className="font-light  text-zinc-400">
-          <p className="text-zinc-500">
-            I&apos;m a{" "}
-            <span className="font-semibold">full stack software engineer</span>{" "}
-            who loves to work with web technologies such as{" "}
-            <span className="font-semibold">React and NextJS</span>, but I also
-            have a solid academic background in computer engineering, machine
-            learning, and networking.
-          </p>
-        </div>
-        <div className="flex w-full flex-col justify-start  gap-4 md:flex-row md:items-center md:gap-8">
-          <ExternalLinkButton
-            icon={<Download />}
-            href={"/resume.pdf"}
-            label="Get Resume"
-            target="_blank"
-          />
-          <GithubLinkButton />
-          <ExternalLinkButton
-            icon={<Linkedin />}
-            href={"https://www.linkedin.com/in/filippo-undefined-248034262/"}
-            label="LinkedIn"
-            target="_blank"
-          />
-        </div>
+            <div className="font-light  text-zinc-400">
+              <p className="text-zinc-500">
+                I&apos;m a{" "}
+                <span className="font-semibold">
+                  full stack software engineer
+                </span>{" "}
+                who loves to work with web technologies such as{" "}
+                <span className="font-semibold">React and NextJS</span>, but I
+                also have a solid academic background in computer engineering,
+                machine learning, and networking.
+              </p>
+            </div>
+            <div className="flex w-full flex-col justify-start  gap-4 md:flex-row md:items-center md:gap-8">
+              <ExternalLinkButton
+                icon={<Download />}
+                href={"/resume.pdf"}
+                label="Get Resume"
+                target="_blank"
+              />
+              <GithubLinkButton />
+              <ExternalLinkButton
+                icon={<Linkedin />}
+                href={
+                  "https://www.linkedin.com/in/filippo-undefined-248034262/"
+                }
+                label="LinkedIn"
+                target="_blank"
+              />
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </PageContent>
     </>
   );
