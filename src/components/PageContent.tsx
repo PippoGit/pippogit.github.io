@@ -15,7 +15,7 @@ export function PageContent({
         <h1 className="mb-3 text-4xl font-semibold tracking-wide text-zinc-200">
           {title}
         </h1>
-        <div className="flex flex-col items-start gap-4">{children}</div>
+        <div className="flex flex-col items-start gap-4 overflow-x-hidden w-full">{children}</div>
       </main>
     </div>
   );
