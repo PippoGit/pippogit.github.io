@@ -1,13 +1,13 @@
-import { Github } from "lucide-react";
 import { ExternalLinkButton } from "./ExternalLinkButton";
 import { SocialLinks } from "../config/links";
+import { Linkedin } from "lucide-react";
 
-export function GithubLinkButton() {
+export function LinkedInLinkButton() {
   return (
     <ExternalLinkButton
-      icon={<Github />}
-      label="Github"
-      href={SocialLinks.github}
+      icon={<Linkedin />}
+      href={SocialLinks.linkedin}
+      label="LinkedIn"
       target="_blank"
     />
   );

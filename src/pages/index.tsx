@@ -1,5 +1,5 @@
 "use client";
-import { Download, Linkedin } from "lucide-react";
+import { Download } from "lucide-react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AvatarCard } from "../components/AvatarCard";
@@ -8,6 +8,7 @@ import { GithubLinkButton } from "../components/GithubLinkButton";
 import { ExternalLinkButton } from "../components/ExternalLinkButton";
 import { PageContent } from "../components/PageContent";
 import { AnimatePresence, motion } from "framer-motion";
+import { LinkedInLinkButton } from "../components/LinkedInLinkButton";
 
 const Home: NextPage = () => {
   return (
@@ -60,14 +61,7 @@ const Home: NextPage = () => {
                 target="_blank"
               />
               <GithubLinkButton />
-              <ExternalLinkButton
-                icon={<Linkedin />}
-                href={
-                  "https://www.linkedin.com/in/filippo-undefined-248034262/"
-                }
-                label="LinkedIn"
-                target="_blank"
-              />
+              <LinkedInLinkButton />
             </div>
           </motion.div>
         </AnimatePresence>

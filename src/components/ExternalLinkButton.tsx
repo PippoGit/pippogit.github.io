@@ -16,7 +16,7 @@ export function ExternalLinkButton({ label, icon, href, target }: Props) {
         <a
           target={target}
           href={href}
-          className="font-semibold text-zinc-400 after:content-['_↗'] hover:text-zinc-300"
+          className="font-semibold text-zinc-400 transition-colors after:content-['_↗'] hover:text-zinc-300"
         >
           {label}
         </a>

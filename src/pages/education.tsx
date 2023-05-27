@@ -5,6 +5,7 @@ import type { ReactElement } from "react";
 
 import { Icon } from "../components/Icon";
 import { PageContent } from "../components/PageContent";
+import { UniversityProjects } from "../components/UniversityProjects";
 
 const Education: NextPage = () => {
   return (
@@ -16,7 +17,9 @@ const Education: NextPage = () => {
       </Head>
       <PageContent title="Education">
         <div className="font-light  text-zinc-400">
-          <p className="text-lg tracking-wide">Degrees and stuff:</p>
+          <p className="text-lg tracking-wide">
+            Degrees and university projects
+          </p>
         </div>
         <EducationItem
           icon={<GraduationCap />}
@@ -47,6 +50,8 @@ const Education: NextPage = () => {
           grade={"100/100"}
           year={2013}
         />
+        <span />
+        <UniversityProjects />
       </PageContent>
     </>
   );
@@ -83,7 +88,7 @@ function EducationItem({
         <p>
           <a
             href={instituteUrl}
-            className="font-semibold text-zinc-400 after:content-['_↗'] hover:text-zinc-300"
+            className="font-semibold text-zinc-400 transition-colors after:content-['_↗'] hover:text-zinc-300"
           >
             {institute}
           </a>
@@ -96,13 +101,13 @@ function EducationItem({
           <div className="mt-2 flex w-full justify-end gap-4">
             <a
               href={thesisUrl}
-              className="rounded-full bg-zinc-700 px-3 py-1 text-xs font-semibold text-zinc-400 after:content-['_↗'] hover:bg-zinc-600 hover:text-zinc-300"
+              className="rounded-full bg-zinc-700 px-3 py-1 text-xs font-semibold text-zinc-400 transition-colors after:content-['_↗'] hover:bg-zinc-600 hover:text-zinc-300"
             >
               PDF Thesis
             </a>
             <a
               href={slidesUrl}
-              className="rounded-full bg-zinc-700 px-3 py-1 text-xs font-semibold text-zinc-400 after:content-['_↗'] hover:bg-zinc-600 hover:text-zinc-300"
+              className=" rounded-full bg-zinc-700 px-3 py-1 text-xs font-semibold text-zinc-400 transition-colors after:content-['_↗'] hover:bg-zinc-600 hover:text-zinc-300"
             >
               Slides
             </a>

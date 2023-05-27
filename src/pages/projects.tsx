@@ -3,7 +3,6 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
 import { PageContent } from "../components/PageContent";
-import { UniversityProjects } from "../components/UniversityProjects";
 
 interface WorkProject {
   id: string;
@@ -70,13 +69,12 @@ const Projects: NextPage = () => {
         <div className="flex flex-col items-start gap-4">
           <div className="font-light  text-zinc-400">
             <p className="text-lg tracking-wide">
-              Work and university projects:
+              Work experience and projects
             </p>
           </div>
           {workProjects.map((project) => (
             <ProjectsItem key={project.id} project={project} />
           ))}
-          <UniversityProjects />
         </div>
       </PageContent>
     </>
@@ -93,7 +91,7 @@ function ProjectsItem({ project }: ProjectsItemProps) {
       <p className="font-semibold tracking-wide ">{project.title}</p>
       <a
         href={project.company.url}
-        className="text-sm font-semibold text-zinc-400 after:content-['_↗'] hover:text-zinc-300"
+        className="text-sm font-semibold text-zinc-400 transition-colors after:content-['_↗'] hover:text-zinc-300"
       >
         {project.company.name}
       </a>

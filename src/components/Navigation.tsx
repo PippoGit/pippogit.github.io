@@ -31,7 +31,7 @@ function NavLink({ href, label }: NavLinkProps) {
     <Link
       href={href}
       aria-current={pathname === href ? "page" : undefined}
-      className="flex-grow-0 rounded-lg py-1 px-3 text-base tracking-wide hover:text-zinc-300 aria-current:bg-zinc-800 aria-current:text-zinc-300 md:text-base"
+      className="flex-grow-0 rounded-lg py-1 px-3 text-base tracking-wide transition-all hover:text-zinc-300 aria-current:bg-zinc-800 aria-current:text-zinc-300 md:text-base"
     >
       {label}
     </Link>

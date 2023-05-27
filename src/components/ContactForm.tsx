@@ -63,7 +63,7 @@ export function ContactForm() {
 
               <button
                 disabled={sendMessageMutation.isLoading}
-                className="text-md flex flex-grow-0 items-center justify-center gap-4 rounded-lg bg-pink-700 p-2 font-semibold tracking-wide text-pink-100 hover:bg-pink-800"
+                className="text-md flex flex-grow-0 items-center justify-center gap-4 rounded-lg bg-pink-700 p-2 font-semibold tracking-wide text-pink-100 transition-colors hover:bg-pink-800"
               >
                 {sendMessageMutation.isLoading ? (
                   <>

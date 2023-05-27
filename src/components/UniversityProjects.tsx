@@ -1,10 +1,5 @@
 "use client";
-import {
-  ChevronDown,
-  ChevronRight,
-  ChevronUp,
-  GraduationCap,
-} from "lucide-react";
+import { ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { Icon } from "./Icon";
 
@@ -92,7 +87,7 @@ const pinnedProjects: UniversityProject[] = [
 ];
 
 export function UniversityProjects() {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const variants: Variants = {
     visible: {
       height: "auto",
@@ -116,9 +111,9 @@ export function UniversityProjects() {
     <div className="flex w-full flex-col gap-2 rounded-lg">
       <div
         onClick={() => setIsExpanded((val) => !val)}
-        className="flex cursor-pointer items-center gap-3 rounded-lg border-none border-zinc-800 bg-zinc-800 p-2 px-3 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300"
+        className="flex cursor-pointer items-center gap-3 rounded-lg border-none border-zinc-800 bg-zinc-800 p-2 px-3 text-zinc-400 transition-colors hover:bg-zinc-700 hover:text-zinc-300"
       >
-        <Icon as={<GraduationCap />} />
+        {/* <Icon as={<Code />} /> */}
         <p className="w-full text-sm font-semibold">University Projects</p>
         <Icon as={isExpanded ? <ChevronUp /> : <ChevronDown />} />
       </div>
@@ -153,7 +148,7 @@ function ProjectsItem({ project }: ProjectsItemProps) {
     <a
       href={project.documentationUrl}
       target="_blank"
-      className="flex w-full cursor-pointer items-center rounded-lg p-2 px-4 text-base text-zinc-400 hover:bg-zinc-800"
+      className="flex w-full cursor-pointer items-center rounded-lg p-2 px-4 text-base text-zinc-400 transition-colors hover:bg-zinc-800"
       rel="noreferrer"
     >
       <div className="flex w-full flex-col items-start">
