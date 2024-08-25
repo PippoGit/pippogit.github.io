@@ -19,6 +19,52 @@ interface WorkProject {
 
 const workProjects = [
   {
+    id: "mastercard",
+    title: "Visual Acquiring Optimizer and Portfolio Optimizer",
+    company: {
+      name: "Hyntelo",
+      url: "https://hyntelo.com",
+    },
+    year: 2024,
+    details: "Developed an enterprise data visualization platform for Mastercard. Collaborated in a diverse, multi-ethnic team, adhering to Mastercard's proprietary technologies and standards.",
+    technologies: [
+      "**Frontend**: React with Redux Toolkit and RTK Query for state management.",
+      "**Backend**: C# with MS SQL."
+    ],
+    tags: ["React", "TypeScript", "Redux", "C#"],
+  },
+  {
+    id: "HTTP",
+    title: "Ping-Pong Ranking Platform",
+    company: {
+      name: "Hyntelo",
+      url: "https://hyntelo.com",
+    },
+    year: 2024,
+    details: "Developed a side project leveraging the Elo algorithm to rank players in a ping pong game, fostering a fun and competitive environment among colleagues.",
+    technologies: [
+      "**Frontend**: TypeScript, Next14, shadcn-ui",
+      "**Backend**: Next14 backend functionalities (react server components and server actions)",
+      "**Database**: Postgres with drizzle."
+    ],
+    tags: ["NextJS", "TypeScript", "Drizzle", "RSC"],
+  },
+  {
+    id: "lyriko",
+    title: "Lyriko",
+    company: {
+      name: "Hyntelo",
+      url: "https://hyntelo.com",
+    },
+    year: 2023,
+    details: "Contributed to feature development for Hyntelo's main product, primarily as a frontend engineer, with additional involvement in backend tasks.",
+    technologies: [
+      "**Frontend**: TypeScript, Angular",
+      "**Backend**: Python with FastAPI and Pydantic",
+    ],
+    tags: ["Angular", "Python"],
+  },
+  {
     id: "WP-OPPLA",
     title: "Food Delivery Platform",
     company: {
@@ -26,15 +72,11 @@ const workProjects = [
       url: "https://landing.deliveryaggregator.com",
     },
     year: 2022,
-    details: "Food delivery platform developed using NextJS and Laravel.",
+    details: "Developed a food delivery platform using modern technologies.",
     technologies: [
-      "**TypeScript** and **NextJS/React** frontend",
-      "Jotai Atoms for global state management",
-      "ChakraUI for user interface",
-      "`react-hook-form` for form validation",
-      "**PHP/Laravel** for the backend",
-      "**GraphQL** APIs (Lighthouse as provider on the backend and URQL as client on the frontend)",
-      "PostgreSQL database with PostGIS extension for geographical queries",
+      "**Frontend**: TypeScript, Next.js/React, Chakra UI for UI, Jotai for state management, and react-hook-form for validation.",
+      "**Backend**: PHP/Laravel with GraphQL APIs (Lighthouse for backend, URQL for frontend).",
+      "**Database**: PostgreSQL with PostGIS for geographical queries."
     ],
     tags: ["NextJS", "Laravel", "TypeScript"],
   },
@@ -47,11 +89,10 @@ const workProjects = [
     },
     year: 2021,
     details:
-      "Business management web application developed using react with multiple users and an administration panel.",
+      "Developed a business management web application with multi-user support and an admin panel.",
     technologies: [
-      "**React** frontend",
-      "MUI for user interface",
-      "Backend powered by **Google Firebase** (authentication, data storage and file storage)",
+      "**Frontend**: React with MUI for the user interface.",
+      "**Backend**: Google Firebase for authentication, data storage, and file storage."
     ],
     tags: ["React", "Firebase"],
   },

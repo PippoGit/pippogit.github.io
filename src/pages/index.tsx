@@ -45,12 +45,8 @@ const Home: NextPage = () => {
               <p className="text-zinc-500">
                 I&apos;m a{" "}
                 <span className="font-semibold">
-                  full stack software engineer
-                </span>{" "}
-                who loves to work with web technologies such as{" "}
-                <span className="font-semibold">React and NextJS</span>, but I
-                also have a solid academic background in computer engineering,
-                machine learning, and networking.
+                  {"full stack developer"}
+                </span>{" with a strong foundation in "}<span className="font-semibold">{"computer engineering"}</span>, <span className="font-semibold">{"machine learning"}</span>, and <span className="font-semibold">{"networking"}</span>, specializing in modern web technologies.
               </p>
             </div>
             <div className="flex w-full flex-col justify-start  gap-4 md:flex-row md:items-center md:gap-8">

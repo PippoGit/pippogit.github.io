@@ -31,12 +31,12 @@ export function SkillsList() {
         <SkillsItem
           icon={<Server />}
           topic="Backend"
-          skills="PHP, Laravel, NodeJS, Java, Python, GraphQL"
+          skills="C#, PHP, Laravel, NodeJS, Java, Python, GraphQL"
         />
         <SkillsItem
           icon={<Layout />}
           topic="Frontend"
-          skills="Javascript, TypeScript, React, NextJS, Tailwind"
+          skills="Javascript, TypeScript, React, Angular, NextJS, Tailwind"
         />
         <SkillsItem
           icon={<Bot />}
