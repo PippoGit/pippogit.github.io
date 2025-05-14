@@ -2,8 +2,8 @@ export const me = {
   currentPosition: {
     role: "Software Engineer",
     company: {
-      name: "Hyntelo",
-      url: "https://www.hyntelo.com/",
+      name: "Verizon Connect",
+      url: "https://www.verizonconnect.com/",
     },
   },
   education: "MSc in Computer Engineering",
